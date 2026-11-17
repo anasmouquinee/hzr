@@ -62,6 +62,25 @@
   --border-medium: rgba(15, 23, 42, 0.14);
   --border-dark: rgba(255, 255, 255, 0.12);
   --border-gold: rgba(200, 155, 60, 0.35);
+  --border-gold-glow: rgba(200, 155, 60, 0.6);
+
+  /* --- Glassmorphism & Luxury Surfaces --- */
+  --glass-bg-light: rgba(255, 255, 255, 0.82);
+  --glass-bg-dark: rgba(7, 30, 56, 0.75);
+  --glass-bg-card: rgba(255, 255, 255, 0.9);
+  --glass-border-light: rgba(255, 255, 255, 0.4);
+  --glass-border-gold: rgba(200, 155, 60, 0.3);
+  --glass-border-gold-hover: rgba(200, 155, 60, 0.65);
+  --glass-blur-sm: 8px;
+  --glass-blur-md: 16px;
+  --glass-blur-lg: 24px;
+
+  /* --- Luxury Gradients & Shimmer --- */
+  --gradient-gold: linear-gradient(135deg, #b88628 0%, #c89b3c 50%, #deb45a 100%);
+  --gradient-gold-hover: linear-gradient(135deg, #c89b3c 0%, #deb45a 50%, #f5e4bd 100%);
+  --gradient-navy: linear-gradient(145deg, #030d1a 0%, #071e38 60%, #0b2c4f 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.65) 100%);
+  --gradient-glass-dark: linear-gradient(135deg, rgba(7, 30, 56, 0.85) 0%, rgba(3, 13, 26, 0.9) 100%);
 
   /* --- Typography --- */
   --font-heading: 'Outfit', 'Onest', system-ui, -apple-system, sans-serif;
@@ -75,7 +94,18 @@
   --shadow-lg: 0 12px 28px -4px rgba(4, 20, 39, 0.12), 0 4px 10px -2px rgba(4, 20, 39, 0.06);
   --shadow-xl: 0 20px 40px -8px rgba(4, 20, 39, 0.18), 0 8px 16px -4px rgba(4, 20, 39, 0.08);
   --shadow-gold: 0 10px 25px -5px rgba(200, 155, 60, 0.28);
+  --shadow-gold-lg: 0 16px 36px -6px rgba(200, 155, 60, 0.38);
+  --shadow-gold-glow: 0 0 28px rgba(200, 155, 60, 0.35);
   --shadow-glow: 0 0 30px rgba(11, 44, 79, 0.2);
+
+  /* --- Z-Index Hierarchy --- */
+  --z-header: 50;
+  --z-topbar: 55;
+  --z-floating: 90;
+  --z-dropdown: 100;
+  --z-drawer: 200;
+  --z-modal-backdrop: 1000;
+  --z-modal: 1010;
 
   /* --- Layout & Spacing --- */
   --container-max-width: 1280px;

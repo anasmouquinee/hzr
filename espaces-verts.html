@@ -121,7 +121,7 @@
   <section class="kzr-page-hero">
     <div class="kzr-page-hero-pattern"></div>
     <div class="container">
-      <nav class="kzr-breadcrumbs">
+      <nav class="kzr-breadcrumbs" aria-label="Fil d'Ariane">
         <a href="index.html">Accueil</a>
         <i class="fa-solid fa-chevron-right"></i>
         <span>Pôle 06</span>
@@ -134,6 +134,16 @@
       <p class="kzr-page-hero-subtitle">
         Sublimez et entretenez votre patrimoine végétal. Création de jardins sur-mesure, tonte soignée, élagage et gestion raisonnée de l'eau d'arrosage.
       </p>
+      <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <a href="#devis-rapide" class="kzr-btn kzr-btn-gold gold-shimmer-btn">
+          <i class="fa-solid fa-calculator"></i>
+          <span>Devis Express Espaces Verts</span>
+        </a>
+        <button type="button" class="kzr-btn kzr-btn-outline-white kzr-pole-deep-dive-btn" data-pole-open="espaces-verts" aria-label="Consulter les spécifications du Pôle Espaces Verts">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Fiche Technique Paysage & Équipements</span>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -149,7 +159,7 @@
       </div>
 
       <div class="kzr-service-prestations-grid">
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/espaces-verts-conception.jpg" alt="Conception paysagère et plans 3D" class="kzr-prestation-img">
           </div>
@@ -159,7 +169,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/espaces-verts-creation.jpg" alt="Création de jardins et gazon" class="kzr-prestation-img">
           </div>
@@ -169,7 +179,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/espaces-verts-tonte.jpg" alt="Tonte et entretien des pelouses" class="kzr-prestation-img">
           </div>
@@ -179,7 +189,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/espaces-verts-taille.jpg" alt="Taille et élagage des arbres" class="kzr-prestation-img">
           </div>
@@ -189,7 +199,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/espaces-verts-arrosage.jpg" alt="Système d'arrosage automatique" class="kzr-prestation-img">
           </div>
@@ -199,13 +209,144 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/espaces-verts-remise-etat.jpg" alt="Remise en état et soins des végétaux" class="kzr-prestation-img">
           </div>
           <div class="kzr-prestation-body">
             <h4>Soins Végétaux & Remise en État</h4>
             <p>Fertilisation biologique, amendement organique des sols, traitement préventif contre les ravageurs et réhabilitation de parcs à l'abandon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== QUICK DEVIS WIDGET ESPACES VERTS ==================== -->
+  <section class="section section-dark" id="devis-rapide" style="background: linear-gradient(135deg, var(--color-navy-950), var(--color-navy-900));">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-dark">Devis Jardins & Paysage</span>
+        <h2 class="section-title">Estimation Express Espaces Verts</h2>
+        <p class="section-subtitle">
+          Indiquez les particularités de vos extérieurs pour recevoir une proposition d'entretien ou d'aménagement sur-mesure.
+        </p>
+      </div>
+
+      <div class="kzr-form-card glass-card-dark" style="max-width: 860px; margin: 0 auto;">
+        <form class="kzr-quick-devis-form" data-pole="espaces-verts">
+          <div class="kzr-form-grid">
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="vert-type">Nature du Lieu *</label>
+              <select id="vert-type" class="kzr-form-select" required>
+                <option value="copropriete">Jardins de Copropriété / Résidence fermée</option>
+                <option value="entreprise">Parc de Siège Social / Bureaux d'entreprise</option>
+                <option value="villa">Jardin de Villa de Prestige / Domaine privé</option>
+                <option value="terrasse">Terrasse Végétalisée / Toit-terrasse</option>
+                <option value="creation">Nouveau Projet de Création Paysagère</option>
+              </select>
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="vert-surface">Surface estimée du jardin (m²)</label>
+              <input type="number" id="vert-surface" class="kzr-form-input" placeholder="Ex: 400 m²">
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="vert-prestation">Prestation Principale *</label>
+              <select id="vert-prestation" class="kzr-form-select" required>
+                <option value="entretien-annuel">Contrat d'Entretien Annuel Régulier (Tonte, Taille)</option>
+                <option value="creation-amenagement">Création & Rénovation Complète de Jardin</option>
+                <option value="arrosage-auto">Installation / Rénovation Arrosage Automatique</option>
+                <option value="elagage-palmiers">Élagage d'Arbres & Soins des Palmiers</option>
+                <option value="remise-etat">Remise en état ponctuelle de jardin</option>
+              </select>
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="vert-tel">Téléphone de contact *</label>
+              <input type="tel" id="vert-tel" class="kzr-form-input" placeholder="+212 661-250118" required>
+            </div>
+            <div class="kzr-form-group col-span-2">
+              <label class="kzr-form-label" for="vert-nom">Nom complet ou Représentant *</label>
+              <input type="text" id="vert-nom" class="kzr-form-input" placeholder="Ex: M. Bennani (Président de Syndic / Propriétaire)" required>
+            </div>
+          </div>
+          <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between;">
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button type="submit" class="kzr-btn kzr-btn-gold gold-shimmer-btn">
+                <i class="fa-solid fa-tree"></i>
+                <span>Recevoir le Diagnostic Paysager</span>
+              </button>
+              <a href="https://wa.me/212661250118?text=Bonjour%20KZR,%20je%20souhaite%20un%20devis%20Espaces%20Verts" target="_blank" rel="noopener" class="kzr-btn" style="background:#25D366; color:#fff;">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp Paysage</span>
+              </a>
+            </div>
+            <button type="button" class="kzr-btn kzr-btn-outline-gold kzr-pole-deep-dive-btn" data-pole-open="espaces-verts">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Fiche Pôle Paysage & Plantes</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ACCORDION ESPACES VERTS ==================== -->
+  <section class="section" style="background-color: var(--color-white); border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">FAQ Espaces Verts & Paysage</span>
+        <h2 class="section-title">Tout Ce Qu'il Faut Savoir sur l'Entretien Végétal</h2>
+        <p class="section-subtitle">
+          Questions courantes sur nos méthodes d'arrosage éco-responsables et la fréquence des interventions.
+        </p>
+      </div>
+
+      <div class="kzr-faq-list">
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Comment adaptez-vous l'arrosage au contexte de stress hydrique au Maroc ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Nous privilégions des solutions éco-responsables à forte efficacité : installation de micro-irrigation goutte-à-goutte enterrée, programmateurs connectés couplés à des sondes hygrométriques, programmation nocturne pour limiter l'évaporation et sélection de végétaux xérophiles adaptés au climat méditerranéen.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Quelle est la fréquence de passage recommandée pour une copropriété ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Selon la superficie et les essences végétales, nous préconisons un passage hebdomadaire en période printanière et estivale (tonte, taille, désherbage et surveillance sanitaire), et un passage bimensuel en hiver, garantissant des espaces extérieurs toujours accueillants.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Traitez-vous contre le charançon rouge du palmier et les maladies végétales ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Oui, nous disposons de protocoles préventifs et curatifs certifiés (endothérapie, piégeage biologique et traitements raisonnés) pour protéger vos palmiers Phoenix et Washingtonia contre le charançon rouge ainsi que l'ensemble de vos plantations contre les parasites.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Fournissez-vous également les plantes, arbustes et le gazon en rouleau ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Oui, nous travaillons directement avec les meilleures pépinières du Royaume pour vous fournir des plants vigoureux et acclimatés : gazon en rouleau Bermuda ou Paspalum, oliviers taillés en nuage, strelitzias, bougainvilliers et agrumes avec garantie de reprise.
+            </div>
           </div>
         </div>
       </div>
@@ -274,6 +415,22 @@
     <button type="button" class="kzr-back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
   </aside>
 
+  <!-- ==================== POLE DEEP-DIVE MODAL SKELETON ==================== -->
+  <div id="kzr-pole-modal" class="kzr-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="kzr-modal-title">
+    <div class="kzr-modal-backdrop" id="kzr-modal-backdrop" data-modal-close></div>
+    <div class="kzr-modal-dialog" role="document">
+      <button type="button" class="kzr-modal-close" id="kzr-modal-close-btn" data-modal-close aria-label="Fermer la fenêtre de détail">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="kzr-modal-content" id="kzr-modal-dynamic-content">
+        <!-- Content dynamically rendered via modal.js -->
+      </div>
+    </div>
+  </div>
+
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/interactive.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/contact.js"></script>
 </body>
 </html>

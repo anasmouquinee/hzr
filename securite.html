@@ -121,7 +121,7 @@
   <section class="kzr-page-hero">
     <div class="kzr-page-hero-pattern"></div>
     <div class="container">
-      <nav class="kzr-breadcrumbs">
+      <nav class="kzr-breadcrumbs" aria-label="Fil d'Ariane">
         <a href="index.html">Accueil</a>
         <i class="fa-solid fa-chevron-right"></i>
         <span>Pôle 02</span>
@@ -134,6 +134,16 @@
       <p class="kzr-page-hero-subtitle">
         Présence dissuasive, agents rigoureusement formés, filtrage électronique des accès et patrouilles mobiles pour sécuriser vos résidences et sièges d'entreprises.
       </p>
+      <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <a href="#devis-rapide" class="kzr-btn kzr-btn-gold gold-shimmer-btn">
+          <i class="fa-solid fa-calculator"></i>
+          <span>Devis Express Sécurité</span>
+        </a>
+        <button type="button" class="kzr-btn kzr-btn-outline-white kzr-pole-deep-dive-btn" data-pole-open="securite" aria-label="Consulter les spécifications et certifications du Pôle Sécurité">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Fiche Technique & Équipements</span>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -149,7 +159,7 @@
       </div>
 
       <div class="kzr-service-prestations-grid">
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/securite-gardiennage.jpg" alt="Gardiennage physique 24/7" class="kzr-prestation-img">
           </div>
@@ -159,7 +169,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/securite-acces.jpg" alt="Contrôle d'accès et filtrage" class="kzr-prestation-img">
           </div>
@@ -169,7 +179,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/securite-surveillance-mobile.jpg" alt="Surveillance mobile et rondes" class="kzr-prestation-img">
           </div>
@@ -179,7 +189,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/securite-accueil.jpg" alt="Accueil et conciergerie" class="kzr-prestation-img">
           </div>
@@ -189,7 +199,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/securite-evenementielle.jpg" alt="Sécurité événementielle" class="kzr-prestation-img">
           </div>
@@ -199,13 +209,143 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/securite-urgences.jpg" alt="Gestion des urgences et astreinte" class="kzr-prestation-img">
           </div>
           <div class="kzr-prestation-body">
             <h4>Gestion des Urgences & Astreinte</h4>
             <p>Ligne d'astreinte opérationnelle 24h/24, coordination immédiate avec les forces de l'ordre, pompiers ou services de secours en cas d'incident.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== QUICK DEVIS WIDGET SÉCURITÉ ==================== -->
+  <section class="section section-dark" id="devis-rapide" style="background: linear-gradient(135deg, var(--color-navy-950), var(--color-navy-900));">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-dark">Audit & Dimensionnement</span>
+        <h2 class="section-title">Devis Express Sécurité & Gardiennage</h2>
+        <p class="section-subtitle">
+          Indiquez vos besoins de gardiennage pour recevoir une proposition tarifaire et un plan de déploiement sous 24h.
+        </p>
+      </div>
+
+      <div class="kzr-form-card glass-card-dark" style="max-width: 860px; margin: 0 auto;">
+        <form class="kzr-quick-devis-form" data-pole="securite">
+          <div class="kzr-form-grid">
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="sec-site">Type d'Établissement ou Site *</label>
+              <select id="sec-site" class="kzr-form-select" required>
+                <option value="siege-entreprise">Siège Social / Bureaux d'entreprise</option>
+                <option value="residence-copropriete">Résidence haut de gamme / Copropriété</option>
+                <option value="site-industriel">Site Industriel / Dépôt / Plateforme logistique</option>
+                <option value="chantier">Chantier de Construction / Bâtiment</option>
+                <option value="evenementiel">Événement d'entreprise / Salon / VIP</option>
+              </select>
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="sec-horaires">Couverture Souhaitée *</label>
+              <select id="sec-horaires" class="kzr-form-select" required>
+                <option value="24-7">Gardiennage Continu 24h/24 et 7j/7</option>
+                <option value="nuit-weekend">Surveillance Nuit + Week-ends & Jours fériés</option>
+                <option value="jour-ouvrable">Poste de Jour (08h00 - 19h00)</option>
+                <option value="rondes">Rondes de Sécurité Périodiques programmées</option>
+              </select>
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="sec-nom">Nom ou Raison Sociale *</label>
+              <input type="text" id="sec-nom" class="kzr-form-input" placeholder="Ex: Société ABC / M. Alami" required>
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="sec-tel">Téléphone de contact *</label>
+              <input type="tel" id="sec-tel" class="kzr-form-input" placeholder="+212 661-250118" required>
+            </div>
+            <div class="kzr-form-group col-span-2">
+              <label class="kzr-form-label" for="sec-ville">Emplacement du site (Casablanca / Maroc)</label>
+              <input type="text" id="sec-ville" class="kzr-form-input" placeholder="Ex: Sidi Maârouf, Ain Sebaâ, Bouskoura, Casablanca centre...">
+            </div>
+          </div>
+          <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between;">
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button type="submit" class="kzr-btn kzr-btn-gold gold-shimmer-btn">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Recevoir l'Offre Sécurité sous 24h</span>
+              </button>
+              <a href="https://wa.me/212661250118?text=Bonjour%20KZR,%20je%20souhaite%20un%20devis%20de%20S%C3%A9curit%C3%A9%20Gardiennage" target="_blank" rel="noopener" class="kzr-btn" style="background:#25D366; color:#fff;">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp Sécurité</span>
+              </a>
+            </div>
+            <button type="button" class="kzr-btn kzr-btn-outline-gold kzr-pole-deep-dive-btn" data-pole-open="securite">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Certifications & Équipements</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ACCORDION SÉCURITÉ ==================== -->
+  <section class="section" style="background-color: var(--color-white); border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">FAQ Sécurité & Gardiennage</span>
+        <h2 class="section-title">Questions Courantes sur Nos Services de Sécurité</h2>
+        <p class="section-subtitle">
+          Tout savoir sur l'agrément ministériel, la qualification de nos agents et nos procédures de contrôle.
+        </p>
+      </div>
+
+      <div class="kzr-faq-list">
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Vos agents de sécurité disposent-ils d'agréments officiels au Maroc ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Oui, toutes nos prestations de sécurité privée et de gardiennage sont exercées en stricte conformité avec la réglementation marocaine régissant le secteur, sous agrément officiel du Ministère de l'Intérieur. Nos agents sont assermentés, titulaires d'un casier judiciaire vierge et régulièrement formés.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Comment contrôlez-vous la régularité des rondes nocturnes ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Nos agents utilisent des pointeaux électroniques RFID / GPS infalsifiables. Chaque point de contrôle (issues de secours, toitures, sous-sols) est scanné lors de chaque passage. Un rapport informatisé horodaté est généré et transmis au client chaque matin.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Quel est le délai de remplacement d'un agent en cas d'absence ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              KZR Consulting dispose d'une équipe opérationnelle de réserve permanente à Casablanca. En cas de congé ou d'imprévu, un agent remplaçant préalablement formé aux spécificités de votre site est déployé en moins de 60 minutes.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Peut-on combiner sécurité physique et nettoyage de nos bureaux ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Tout à fait ! Notre formule Synergie Multiservices permet de coordonner les équipes de sécurité et de propreté sous la supervision d'un chef de site KZR unique, avec une nette réduction de vos coûts de gestion.
+            </div>
           </div>
         </div>
       </div>
@@ -274,6 +414,22 @@
     <button type="button" class="kzr-back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
   </aside>
 
+  <!-- ==================== POLE DEEP-DIVE MODAL SKELETON ==================== -->
+  <div id="kzr-pole-modal" class="kzr-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="kzr-modal-title">
+    <div class="kzr-modal-backdrop" id="kzr-modal-backdrop" data-modal-close></div>
+    <div class="kzr-modal-dialog" role="document">
+      <button type="button" class="kzr-modal-close" id="kzr-modal-close-btn" data-modal-close aria-label="Fermer la fenêtre de détail">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="kzr-modal-content" id="kzr-modal-dynamic-content">
+        <!-- Content dynamically rendered via modal.js -->
+      </div>
+    </div>
+  </div>
+
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/interactive.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/contact.js"></script>
 </body>
 </html>

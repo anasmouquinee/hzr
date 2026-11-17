@@ -121,7 +121,7 @@
   <section class="kzr-page-hero">
     <div class="kzr-page-hero-pattern"></div>
     <div class="container">
-      <nav class="kzr-breadcrumbs">
+      <nav class="kzr-breadcrumbs" aria-label="Fil d'Ariane">
         <a href="index.html">Accueil</a>
         <i class="fa-solid fa-chevron-right"></i>
         <span>Pôle 05</span>
@@ -134,6 +134,16 @@
       <p class="kzr-page-hero-subtitle">
         Modélisation 3D avant travaux, agencement sur-mesure de bureaux d'exception et cuisines modernes. Une signature architecturale raffinée.
       </p>
+      <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <a href="#devis-rapide" class="kzr-btn kzr-btn-gold gold-shimmer-btn">
+          <i class="fa-solid fa-calculator"></i>
+          <span>Devis Express Aménagement</span>
+        </a>
+        <button type="button" class="kzr-btn kzr-btn-outline-white kzr-pole-deep-dive-btn" data-pole-open="amenagement" aria-label="Consulter les spécifications du Pôle Aménagement & Déco">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Catalogue & Conception 3D</span>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -149,7 +159,7 @@
       </div>
 
       <div class="kzr-service-prestations-grid">
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/amenagement-plans3d.jpg" alt="Conception et modélisation 3D" class="kzr-prestation-img">
           </div>
@@ -159,7 +169,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/amenagement-pro.jpg" alt="Agencement de bureaux professionnels" class="kzr-prestation-img">
           </div>
@@ -169,7 +179,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/amenagement-cuisines.jpg" alt="Cuisines équipées sur-mesure" class="kzr-prestation-img">
           </div>
@@ -179,7 +189,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/amenagement-interieur.jpg" alt="Relooking d'intérieur résidentiel" class="kzr-prestation-img">
           </div>
@@ -189,7 +199,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/amenagement-eclairage.jpg" alt="Éclairage architectural et d'ambiance" class="kzr-prestation-img">
           </div>
@@ -199,13 +209,138 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/amenagement-exterieur.jpg" alt="Aménagement de terrasses et extérieurs" class="kzr-prestation-img">
           </div>
           <div class="kzr-prestation-body">
             <h4>Terrasses & Espaces de Vie Extérieurs</h4>
             <p>Pergolas bioclimatiques, salons extérieurs en teck ou aluminium thermolaqué, et transition fluide entre l'intérieur et vos jardins.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== QUICK DEVIS WIDGET AMÉNAGEMENT ==================== -->
+  <section class="section section-dark" id="devis-rapide" style="background: linear-gradient(135deg, var(--color-navy-950), var(--color-navy-900));">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-dark">Conception Personnalisée</span>
+        <h2 class="section-title">Estimation Projet Aménagement & Déco</h2>
+        <p class="section-subtitle">
+          Partagez les grandes lignes de votre projet pour programmer une séance de cadrage avec notre architecte d'intérieur.
+        </p>
+      </div>
+
+      <div class="kzr-form-card glass-card-dark" style="max-width: 860px; margin: 0 auto;">
+        <form class="kzr-quick-devis-form" data-pole="amenagement">
+          <div class="kzr-form-grid">
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="deco-type">Type de Projet d'Aménagement *</label>
+              <select id="deco-type" class="kzr-form-select" required>
+                <option value="bureaux-pro">Bureaux d'Entreprise / Siège Social / Coworking</option>
+                <option value="cuisine-surmesure">Cuisine Équipée Sur-Mesure Haut de Gamme</option>
+                <option value="relooking-residentiel">Relooking Appartement / Villa de Prestige</option>
+                <option value="commerce-showroom">Showroom / Boutique / Cabinet Médical</option>
+                <option value="terrasse-pergola">Terrasse Extérieure / Pergola Bioclimatique</option>
+              </select>
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="deco-surface">Surface approximative (m²)</label>
+              <input type="number" id="deco-surface" class="kzr-form-input" placeholder="Ex: 85 m²">
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="deco-nom">Nom complet ou Entreprise *</label>
+              <input type="text" id="deco-nom" class="kzr-form-input" placeholder="Ex: Mme. Chraïbi / Société ABC" required>
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="deco-tel">Téléphone de contact *</label>
+              <input type="tel" id="deco-tel" class="kzr-form-input" placeholder="+212 661-250118" required>
+            </div>
+            <div class="kzr-form-group col-span-2">
+              <label class="kzr-form-label" for="deco-attentes">Vos inspirations et souhaits particuliers</label>
+              <input type="text" id="deco-attentes" class="kzr-form-input" placeholder="Ex: Style moderne minimaliste, bois noble, claustras, verrière...">
+            </div>
+          </div>
+          <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between;">
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button type="submit" class="kzr-btn kzr-btn-gold gold-shimmer-btn">
+                <i class="fa-solid fa-couch"></i>
+                <span>Demander l'Étude d'Aménagement</span>
+              </button>
+              <a href="https://wa.me/212661250118?text=Bonjour%20KZR,%20je%20souhaite%20un%20projet%20d%27Am%C3%A9nagement%20D%C3%A9coration" target="_blank" rel="noopener" class="kzr-btn" style="background:#25D366; color:#fff;">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp Déco</span>
+              </a>
+            </div>
+            <button type="button" class="kzr-btn kzr-btn-outline-gold kzr-pole-deep-dive-btn" data-pole-open="amenagement">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Fiche Pôle & Catalogue 3D</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ACCORDION AMÉNAGEMENT ==================== -->
+  <section class="section" style="background-color: var(--color-white); border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">FAQ Aménagement & Déco</span>
+        <h2 class="section-title">Questions Fréquentes sur Nos Projets Déco</h2>
+        <p class="section-subtitle">
+          Tout comprendre sur la modélisation 3D, le mobilier sur-mesure et l'accompagnement personnalisé.
+        </p>
+      </div>
+
+      <div class="kzr-faq-list">
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>En quoi consiste la modélisation 3D avant travaux ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Nos designers d'intérieur conçoivent une maquette numérique 3D photoréaliste de vos futurs espaces. Vous visualisez avec précision l'éclairage, l'agencement du mobilier, les textures de matériaux (bois, marbre, tissus) et les teintes avant d'engager le moindre euro de travaux.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Fabriquez-vous les éléments de menuiserie sur-mesure au Maroc ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Oui, nous disposons d'ateliers partenaires d'ébénisterie et de menuiserie métallique à Casablanca. Nous confectionnons des dressings sur-mesure, des claustras en chêne ou noyer, des banques d'accueil corporate et des bibliothèques intégrées aux cotes exactes de vos pièces.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Gérez-vous également la fourniture et l'installation de l'éclairage domotisé ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Absolument. Grâce à la synergie avec notre pôle Électricité & Rénovation, nous intégrons des scénarios d'éclairage LED variables, des gorges lumineuses invisibles et des commandes domotiques intelligentes pour créer l'ambiance parfaite.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Quel est le délai pour la réalisation d'une cuisine équipée sur-mesure ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Après validation de vos plans 3D et des matériaux (quartz, granit, caissons hydrofuges), la fabrication en atelier et la pose complète sur site prennent généralement entre 3 et 5 semaines avec finitions impeccables et raccordements plomberie/électricité testés.
+            </div>
           </div>
         </div>
       </div>
@@ -274,6 +409,22 @@
     <button type="button" class="kzr-back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
   </aside>
 
+  <!-- ==================== POLE DEEP-DIVE MODAL SKELETON ==================== -->
+  <div id="kzr-pole-modal" class="kzr-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="kzr-modal-title">
+    <div class="kzr-modal-backdrop" id="kzr-modal-backdrop" data-modal-close></div>
+    <div class="kzr-modal-dialog" role="document">
+      <button type="button" class="kzr-modal-close" id="kzr-modal-close-btn" data-modal-close aria-label="Fermer la fenêtre de détail">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="kzr-modal-content" id="kzr-modal-dynamic-content">
+        <!-- Content dynamically rendered via modal.js -->
+      </div>
+    </div>
+  </div>
+
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/interactive.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/contact.js"></script>
 </body>
 </html>

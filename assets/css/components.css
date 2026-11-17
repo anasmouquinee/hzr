@@ -49,13 +49,38 @@
   background: linear-gradient(135deg, var(--color-gold-700), var(--color-gold));
   color: var(--color-white);
   box-shadow: var(--shadow-gold);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.kzr-btn-gold::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 75%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+  transition: left 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .kzr-btn-gold:hover {
   background: linear-gradient(135deg, var(--color-gold), var(--color-gold-400));
   transform: translateY(-2px);
-  box-shadow: 0 14px 28px -4px rgba(200, 155, 60, 0.4);
+  box-shadow: 0 14px 28px -4px rgba(200, 155, 60, 0.45), var(--shadow-gold-glow);
   color: var(--color-white);
+}
+
+.kzr-btn-gold:hover::after {
+  left: 140%;
 }
 
 .kzr-btn-outline {
@@ -94,9 +119,19 @@
   padding: 5rem 0 6rem 0;
 }
 
+#kzr-hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .kzr-hero-pattern {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background-image: 
     radial-gradient(circle at 15% 25%, rgba(200, 155, 60, 0.12) 0%, transparent 45%),
     radial-gradient(circle at 85% 75%, rgba(16, 60, 107, 0.25) 0%, transparent 50%),
@@ -312,11 +347,103 @@
   color: var(--text-muted);
 }
 
-/* --- 4. THE 6 PÔLES SERVICE CARDS --- */
+/* --- 4. THE 6 PÔLES SERVICE CARDS & FILTER TABS --- */
+
+/* Filter Pill Tabs Bar */
+.kzr-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0 auto 3rem auto;
+  padding: 0.45rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(200, 155, 60, 0.25);
+  box-shadow: 0 4px 20px -2px rgba(4, 20, 39, 0.06);
+  max-width: fit-content;
+}
+
+.kzr-filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 1.35rem;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-navy-900);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.kzr-filter-pill i {
+  font-size: 0.85rem;
+  color: var(--color-slate-500);
+  transition: color var(--transition-fast);
+}
+
+.kzr-filter-pill:hover {
+  background: rgba(200, 155, 60, 0.08);
+  color: var(--accent-gold);
+  border-color: rgba(200, 155, 60, 0.25);
+}
+
+.kzr-filter-pill.active {
+  background: linear-gradient(135deg, var(--color-navy-950), var(--color-navy-850));
+  color: var(--color-white);
+  border-color: var(--accent-gold);
+  box-shadow: 0 6px 18px rgba(4, 20, 39, 0.25), 0 0 14px rgba(200, 155, 60, 0.3);
+}
+
+.kzr-filter-pill.active i {
+  color: var(--accent-gold);
+}
+
+.kzr-filter-pill .kzr-filter-count {
+  font-size: 0.725rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--radius-full);
+  background: rgba(200, 155, 60, 0.2);
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.kzr-filter-pill.active .kzr-filter-count {
+  background: var(--accent-gold);
+  color: var(--color-white);
+}
+
+@media (max-width: 680px) {
+  .kzr-filter-bar {
+    width: 100%;
+    max-width: 100%;
+    border-radius: var(--radius-lg);
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 0.5rem;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .kzr-filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .kzr-poles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  perspective: 1200px;
 }
 
 @media (max-width: 1024px) {
@@ -331,22 +458,85 @@
   }
 }
 
+/* Glassmorphism Luxury Pole Card with Subtle Glowing Gold Border */
 .kzr-pole-card {
   position: relative;
-  background-color: var(--color-white);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 20px -2px rgba(4, 20, 39, 0.06);
+  border: 1px solid rgba(200, 155, 60, 0.22);
   display: flex;
   flex-direction: column;
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  will-change: transform;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.35s ease,
+              visibility 0.35s ease;
+}
+
+.kzr-pole-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(200, 155, 60, 0.5) 0%, transparent 40%, rgba(200, 155, 60, 0.25) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.6;
+  transition: opacity var(--transition-normal);
+  z-index: 3;
 }
 
 .kzr-pole-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
-  border-color: rgba(200, 155, 60, 0.4);
+  box-shadow: 0 22px 45px -10px rgba(4, 20, 39, 0.18), 0 0 28px rgba(200, 155, 60, 0.25);
+  border-color: rgba(200, 155, 60, 0.65);
+}
+
+.kzr-pole-card:hover::before {
+  opacity: 1;
+}
+
+/* Dynamic Interactive 3D Glare Reflection */
+.kzr-pole-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at var(--glare-x, 50%) var(--glare-y, 50%),
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(200, 155, 60, 0.1) 35%,
+    transparent 70%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 4;
+}
+
+.kzr-pole-card:hover::after {
+  opacity: 1;
+}
+
+/* Dynamic Filter Transition States */
+.kzr-pole-card.is-hidden {
+  display: none !important;
+}
+
+.kzr-pole-card.filtering-out {
+  opacity: 0;
+  transform: scale(0.94);
+  pointer-events: none;
 }
 
 .kzr-pole-thumb {
@@ -372,8 +562,9 @@
   left: 1rem;
   background: rgba(4, 20, 39, 0.85);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: var(--color-gold-200);
-  border: 1px solid rgba(200, 155, 60, 0.3);
+  border: 1px solid rgba(200, 155, 60, 0.35);
   font-family: var(--font-heading);
   font-size: 0.725rem;
   font-weight: 700;
@@ -381,7 +572,7 @@
   letter-spacing: 0.08em;
   padding: 0.35rem 0.75rem;
   border-radius: var(--radius-full);
-  z-index: 2;
+  z-index: 4;
 }
 
 .kzr-pole-body {
@@ -389,6 +580,8 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  position: relative;
+  z-index: 2;
 }
 
 .kzr-pole-title {
@@ -432,6 +625,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.75rem;
 }
 
 .kzr-pole-link {
@@ -457,6 +651,30 @@
 
 .kzr-pole-card:hover .kzr-pole-link i {
   transform: translateX(3px);
+}
+
+.kzr-pole-modal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-full);
+  background: rgba(200, 155, 60, 0.12);
+  color: var(--color-navy-900);
+  border: 1px solid rgba(200, 155, 60, 0.3);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.kzr-pole-modal-btn:hover {
+  background: var(--accent-gold);
+  color: var(--color-white);
+  border-color: var(--accent-gold);
+  box-shadow: 0 4px 12px rgba(200, 155, 60, 0.3);
+  transform: translateY(-1px);
 }
 
 /* --- 5. INTERACTIVE MULTISERVICES ESTIMATOR (SIMULATEUR DE PROJET) --- */
@@ -708,6 +926,31 @@
   gap: 0.75rem;
 }
 
+.kzr-btn-print {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  background: rgba(200, 155, 60, 0.1);
+  color: var(--color-navy-950);
+  border: 1.5px solid rgba(200, 155, 60, 0.35);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.kzr-btn-print:hover {
+  background: var(--accent-gold);
+  color: var(--color-white);
+  border-color: var(--accent-gold);
+  box-shadow: 0 4px 14px rgba(200, 155, 60, 0.3);
+  transform: translateY(-2px);
+}
+
 /* --- 6. BEFORE / AFTER COMPARISON SLIDER --- */
 .kzr-ba-container {
   position: relative;
@@ -832,18 +1075,47 @@
 }
 
 .kzr-pillar-card {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
+  position: relative;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-xl);
   padding: 2.25rem 1.75rem;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-light);
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  box-shadow: 0 4px 18px rgba(4, 20, 39, 0.05);
+  border: 1px solid rgba(200, 155, 60, 0.2);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  will-change: transform;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .kzr-pillar-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(200, 155, 60, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 18px 38px -8px rgba(4, 20, 39, 0.14), 0 0 24px rgba(200, 155, 60, 0.22);
+  border-color: rgba(200, 155, 60, 0.55);
+}
+
+.kzr-pillar-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at var(--glare-x, 50%) var(--glare-y, 50%),
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(200, 155, 60, 0.08) 35%,
+    transparent 70%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+.kzr-pillar-card:hover::after {
+  opacity: 1;
 }
 
 .kzr-pillar-icon {
@@ -1038,7 +1310,7 @@
   border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
-/* --- 10. TESTIMONIALS / CLIENT TRUST --- */
+/* --- 10. TESTIMONIALS / CLIENT TRUST & CAROUSEL --- */
 .kzr-testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1051,15 +1323,26 @@
   }
 }
 
+/* Glassmorphism Luxury Testimonial Card */
 .kzr-testimonial-card {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-xl);
   padding: 2.25rem 2rem;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 20px -2px rgba(4, 20, 39, 0.05);
+  border: 1px solid rgba(200, 155, 60, 0.22);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kzr-testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px -6px rgba(4, 20, 39, 0.12), 0 0 20px rgba(200, 155, 60, 0.18);
+  border-color: rgba(200, 155, 60, 0.5);
 }
 
 .kzr-stars {
@@ -1091,6 +1374,7 @@
   border-radius: 50%;
   background: var(--color-navy-850);
   color: var(--color-gold-200);
+  border: 1.5px solid rgba(200, 155, 60, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1110,4 +1394,706 @@
   font-size: 0.8rem;
   color: var(--text-muted);
   margin-bottom: 0;
+}
+
+/* Testimonials Carousel Mode */
+.kzr-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 0.5rem 2rem 0.5rem;
+}
+
+.kzr-carousel-track,
+.kzr-carousel .kzr-testimonials-grid {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .kzr-carousel .kzr-testimonials-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    grid-template-columns: unset;
+  }
+  .kzr-carousel .kzr-testimonial-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+}
+
+.kzr-carousel-slide {
+  flex: 0 0 calc(33.333% - 1.35rem);
+  min-width: calc(33.333% - 1.35rem);
+  box-sizing: border-box;
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .kzr-carousel-slide {
+    flex: 0 0 calc(50% - 1rem);
+    min-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .kzr-carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+}
+
+.kzr-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 0 0.5rem;
+}
+
+.kzr-carousel-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.kzr-carousel-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--color-white);
+  border: 1.5px solid rgba(200, 155, 60, 0.3);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-navy-950);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.kzr-carousel-btn:hover {
+  background: var(--accent-gold);
+  color: var(--color-white);
+  border-color: var(--accent-gold);
+  box-shadow: 0 4px 14px rgba(200, 155, 60, 0.35);
+  transform: translateY(-2px);
+}
+
+.kzr-carousel-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.kzr-carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.kzr-carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-slate-300);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--transition-normal);
+}
+
+.kzr-carousel-dot:hover {
+  background: var(--color-gold-400);
+}
+
+.kzr-carousel-dot.active {
+  width: 32px;
+  background: linear-gradient(90deg, var(--color-gold-700), var(--color-gold));
+  box-shadow: 0 0 10px rgba(200, 155, 60, 0.4);
+}
+
+/* ==========================================================================
+   11. POLE DEEP-DIVE MODAL DIALOG
+   ========================================================================== */
+.kzr-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 13, 26, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: var(--z-modal-backdrop, 1000);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kzr-modal-backdrop.open,
+.kzr-modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.kzr-modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal, 1010);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+}
+
+.kzr-modal.open,
+.kzr-modal.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.kzr-modal-dialog {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 840px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.kzr-modal-content {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  border: 1.5px solid rgba(200, 155, 60, 0.35);
+  box-shadow: 0 30px 70px -15px rgba(3, 13, 26, 0.45), 0 0 35px rgba(200, 155, 60, 0.22);
+  overflow: hidden;
+  transform: translateY(24px) scale(0.97);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.kzr-modal.open .kzr-modal-content,
+.kzr-modal.active .kzr-modal-content {
+  transform: translateY(0) scale(1);
+}
+
+.kzr-modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-full);
+  background: rgba(3, 13, 26, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 20;
+  transition: all var(--transition-fast);
+}
+
+.kzr-modal-close:hover {
+  background: var(--accent-gold);
+  color: var(--color-white);
+  transform: rotate(90deg) scale(1.05);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 16px rgba(200, 155, 60, 0.4);
+}
+
+/* Modal Header - Luxury Dark Moroccan Navy with Gold Accents */
+.kzr-modal-header {
+  background: linear-gradient(135deg, var(--color-navy-950) 0%, var(--color-navy-900) 65%, #071e38 100%);
+  color: var(--color-white);
+  padding: 2.25rem 2.25rem 1.75rem 2.25rem;
+  border-bottom: 1.5px solid rgba(200, 155, 60, 0.3);
+  position: relative;
+}
+
+.kzr-modal-tag-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.kzr-modal-badge {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gold-200);
+  background: rgba(200, 155, 60, 0.15);
+  border: 1px solid rgba(200, 155, 60, 0.35);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+}
+
+.kzr-modal-pill-gold {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-gold-700), var(--color-gold));
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(200, 155, 60, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.kzr-modal-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.kzr-modal-icon-disc {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(200, 155, 60, 0.22), rgba(200, 155, 60, 0.06));
+  border: 1.5px solid var(--accent-gold);
+  color: var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 0 18px rgba(200, 155, 60, 0.3);
+}
+
+.kzr-modal-title {
+  color: var(--color-white);
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.kzr-modal-tagline {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* Modal Body */
+.kzr-modal-body {
+  padding: 2rem 2.25rem;
+  overflow-y: auto;
+  flex: 1;
+  background: var(--color-white);
+}
+
+.kzr-modal-overview-box {
+  background: linear-gradient(135deg, var(--color-slate-50), #f1f5f9);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--accent-gold);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.kzr-modal-overview-box p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-slate-700);
+  margin-bottom: 0;
+}
+
+.kzr-modal-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-navy-950);
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.kzr-modal-subtitle i {
+  color: var(--accent-gold);
+}
+
+.kzr-modal-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+@media (max-width: 768px) {
+  .kzr-modal-spec-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.kzr-modal-spec-col {
+  background: var(--color-slate-50);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-xs);
+}
+
+.kzr-modal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.kzr-modal-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.875rem;
+  color: var(--color-slate-700);
+  line-height: 1.5;
+}
+
+.kzr-modal-list li i {
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.text-gold {
+  color: var(--accent-gold) !important;
+}
+
+/* Modal Footer */
+.kzr-modal-footer {
+  padding: 1.25rem 2.25rem;
+  background: var(--color-navy-950);
+  border-top: 1px solid var(--border-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.kzr-modal-cta-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.kzr-modal-cta-right {
+  display: flex;
+  align-items: center;
+}
+
+.kzr-btn-wa {
+  background: #25D366;
+  color: #ffffff !important;
+  border-color: #25D366;
+  font-weight: 700;
+}
+
+.kzr-btn-wa:hover {
+  background: #20bd5a;
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  transform: translateY(-2px);
+}
+
+.kzr-btn-outline-gold {
+  background: transparent;
+  color: var(--color-navy-900);
+  border: 1.5px solid var(--accent-gold);
+  font-weight: 700;
+}
+
+.kzr-btn-outline-gold:hover {
+  background: var(--accent-gold);
+  color: var(--color-white);
+  box-shadow: var(--shadow-gold);
+}
+
+@media (max-width: 768px) {
+  .kzr-modal-header {
+    padding: 1.5rem;
+  }
+  .kzr-modal-body {
+    padding: 1.5rem;
+  }
+  .kzr-modal-footer {
+    padding: 1.25rem 1.5rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .kzr-modal-cta-left,
+  .kzr-modal-cta-right {
+    width: 100%;
+    flex-direction: column;
+  }
+  .kzr-modal-footer .kzr-btn {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   12. CLEAN PRINTABLE DEVIS STYLING & @media print
+   ========================================================================== */
+.kzr-devis-preview {
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  font-family: var(--font-body);
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.kzr-devis-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #c89b3c;
+  margin-bottom: 2rem;
+}
+
+.kzr-devis-brand h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #041427;
+  margin-bottom: 0.25rem;
+}
+
+.kzr-devis-brand p {
+  font-size: 0.85rem;
+  color: #475569;
+  margin-bottom: 0;
+}
+
+.kzr-devis-meta {
+  text-align: right;
+  font-size: 0.875rem;
+  color: #334155;
+}
+
+.kzr-devis-meta .ref {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: #c89b3c;
+  font-size: 1rem;
+}
+
+.kzr-devis-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  background: #f8fafc;
+  border-radius: var(--radius-md);
+  border: 1px solid #e2e8f0;
+}
+
+.kzr-devis-info-box h4 {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #041427;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #cbd5e1;
+  padding-bottom: 0.25rem;
+}
+
+.kzr-devis-info-box p {
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 0.2rem;
+}
+
+.kzr-devis-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.kzr-devis-table th {
+  background: #041427;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.85rem 1rem;
+}
+
+.kzr-devis-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.kzr-devis-table tr:nth-child(even) td {
+  background: #f8fafc;
+}
+
+.kzr-devis-totals {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2.5rem;
+}
+
+.kzr-devis-totals-box {
+  width: 320px;
+  border: 1.5px solid #c89b3c;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.kzr-devis-totals-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.kzr-devis-totals-row:last-child {
+  border-bottom: none;
+  background: #041427;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.kzr-devis-totals-row:last-child .val {
+  color: #deb45a;
+}
+
+.kzr-devis-legal-footer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #cbd5e1;
+  font-size: 0.75rem;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.kzr-devis-signatures {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.kzr-signature-box {
+  border: 1px dashed #cbd5e1;
+  border-radius: var(--radius-sm);
+  height: 90px;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  color: #64748b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* @media print Rules */
+@media print {
+  /* Hide interactive / web-only UI elements */
+  .kzr-topbar,
+  .kzr-header,
+  .kzr-footer,
+  .kzr-floating-actions,
+  .kzr-menu-toggle,
+  .kzr-mobile-drawer,
+  .kzr-drawer-backdrop,
+  .kzr-filter-bar,
+  .kzr-carousel-controls,
+  .kzr-modal-close,
+  .kzr-btn,
+  .kzr-ba-handle,
+  .kzr-ba-divider,
+  button,
+  #kzr-hero-canvas {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+  }
+
+  /* When printing devis in modal or page */
+  .kzr-modal {
+    position: static !important;
+    display: block !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    overflow: visible !important;
+  }
+
+  .kzr-modal-backdrop {
+    display: none !important;
+  }
+
+  .kzr-modal-content {
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    transform: none !important;
+  }
+
+  .kzr-devis-preview {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* Prevent awkward page breaks */
+  .kzr-devis-info-grid,
+  .kzr-devis-table,
+  .kzr-devis-totals,
+  .kzr-devis-signatures {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  @page {
+    margin: 1.5cm;
+    size: A4 portrait;
+  }
 }

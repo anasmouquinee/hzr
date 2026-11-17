@@ -1,7 +1,8 @@
 /**
  * KZR Consulting - Main JavaScript
- * Handles navigation, mobile menu, scroll effects, and general UX.
- * Built with vanilla modern JavaScript - lightweight and fast.
+ * Handles navigation, sticky header, mobile drawer menu, smooth anchor scrolling with header offset,
+ * scroll reveal animations, and general UX interactions.
+ * Built with vanilla modern JavaScript - ultra-fast, zero dependencies.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,10 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileDrawer();
   initBackToTop();
   initScrollAnimations();
+  initSmoothAnchorScrolling();
 });
 
 /**
- * 1. Sticky Header elevation and styling on scroll
+ * 1. Sticky Header elevation and blur styling on scroll
  */
 function initStickyHeader() {
   const header = document.querySelector('.kzr-header');
@@ -27,7 +29,7 @@ function initStickyHeader() {
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll(); // Initial check
+  handleScroll(); // Initial check on load
 }
 
 /**
@@ -78,6 +80,14 @@ function initMobileDrawer() {
       }
     });
   }
+
+  // Close drawer when clicking any link inside drawer (except accordion toggle)
+  const drawerLinks = drawer.querySelectorAll('a:not(.kzr-drawer-submenu-toggle)');
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeDrawer();
+    });
+  });
 }
 
 /**
@@ -117,4 +127,34 @@ function initScrollAnimations() {
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   elements.forEach(el => observer.observe(el));
+}
+
+/**
+ * 5. Smooth Anchor Scrolling with Header Offset Compensation
+ */
+function initSmoothAnchorScrolling() {
+  const anchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
+
+  anchorLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        e.preventDefault();
+        const header = document.querySelector('.kzr-header');
+        const headerHeight = header ? header.offsetHeight : 70;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+
+        // Set focus to target for accessibility
+        targetElement.setAttribute('tabindex', '-1');
+        targetElement.focus({ preventScroll: true });
+      }
+    });
+  });
 }

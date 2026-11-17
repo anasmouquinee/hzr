@@ -121,7 +121,7 @@
   <section class="kzr-page-hero">
     <div class="kzr-page-hero-pattern"></div>
     <div class="container">
-      <nav class="kzr-breadcrumbs">
+      <nav class="kzr-breadcrumbs" aria-label="Fil d'Ariane">
         <a href="index.html">Accueil</a>
         <i class="fa-solid fa-chevron-right"></i>
         <span>Pôle 01</span>
@@ -134,6 +134,16 @@
       <p class="kzr-page-hero-subtitle">
         Gestion administrative irréprochable, transparence financière totale et maintenance rigoureuse de vos résidences dans le respect absolu de la Loi 18-00.
       </p>
+      <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <a href="#devis-rapide" class="kzr-btn kzr-btn-gold gold-shimmer-btn">
+          <i class="fa-solid fa-calculator"></i>
+          <span>Devis Express Syndic</span>
+        </a>
+        <button type="button" class="kzr-btn kzr-btn-outline-white kzr-pole-deep-dive-btn" data-pole-open="syndic" aria-label="Consulter les spécifications et certifications du Pôle Syndic">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Fiche Technique & Certifications</span>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -149,7 +159,7 @@
       </div>
 
       <div class="kzr-service-prestations-grid">
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/syndic-administratif.jpg" alt="Gestion administrative syndic Casablanca" class="kzr-prestation-img">
           </div>
@@ -159,7 +169,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/syndic-comptable.jpg" alt="Gestion comptable de copropriété" class="kzr-prestation-img">
           </div>
@@ -169,7 +179,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/syndic-entretien.jpg" alt="Entretien et maintenance copropriété" class="kzr-prestation-img">
           </div>
@@ -179,7 +189,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/syndic-securite.jpg" alt="Sécurité et contrôle des accès" class="kzr-prestation-img">
           </div>
@@ -189,7 +199,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/syndic-travaux.jpg" alt="Suivi des travaux de copropriété" class="kzr-prestation-img">
           </div>
@@ -199,7 +209,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/syndic-relations.jpg" alt="Relations résidents et recouvrement" class="kzr-prestation-img">
           </div>
@@ -212,25 +222,149 @@
 
       <!-- Process 4 Steps -->
       <div class="kzr-process-grid" style="margin-top: 3.5rem;">
-        <div class="kzr-process-card">
+        <div class="kzr-process-card tilt-card glass-card">
           <span class="kzr-process-step">01</span>
           <h3 class="kzr-process-title">Audit Initial</h3>
           <p class="kzr-process-desc">Diagnostic de l'état financier et technique de votre immeuble dès la première semaine.</p>
         </div>
-        <div class="kzr-process-card">
+        <div class="kzr-process-card tilt-card glass-card">
           <span class="kzr-process-step">02</span>
           <h3 class="kzr-process-title">Passation & Clôture</h3>
           <p class="kzr-process-desc">Récupération ordonnée des archives et réconciliation des comptes de copropriété.</p>
         </div>
-        <div class="kzr-process-card">
+        <div class="kzr-process-card tilt-card glass-card">
           <span class="kzr-process-step">03</span>
           <h3 class="kzr-process-title">Plan de Maintenance</h3>
           <p class="kzr-process-desc">Mise en place d'un calendrier strict d'entretien préventif et d'économies de charges.</p>
         </div>
-        <div class="kzr-process-card">
+        <div class="kzr-process-card tilt-card glass-card">
           <span class="kzr-process-step">04</span>
           <h3 class="kzr-process-title">Reporting Continu</h3>
           <p class="kzr-process-desc">Comptes-rendus réguliers au Conseil Syndical et assemblée générale sereine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== QUICK DEVIS WIDGET ==================== -->
+  <section class="section section-dark" id="devis-rapide" style="background: linear-gradient(135deg, var(--color-navy-950), var(--color-navy-900));">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-dark">Estimation Rapide</span>
+        <h2 class="section-title">Demande de Devis Express Syndic</h2>
+        <p class="section-subtitle">
+          Obtenez une première estimation personnalisée pour la gestion de votre copropriété en moins de 2 minutes.
+        </p>
+      </div>
+
+      <div class="kzr-form-card glass-card-dark" style="max-width: 860px; margin: 0 auto;">
+        <form class="kzr-quick-devis-form" data-pole="syndic">
+          <div class="kzr-form-grid">
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="syndic-immeuble">Type de Copropriété *</label>
+              <select id="syndic-immeuble" class="kzr-form-select" required>
+                <option value="immeuble-residentiel">Immeuble Résidentiel Standard</option>
+                <option value="residence-fermee">Résidence Fermée & Sécurisée</option>
+                <option value="complexe-mixte">Complexe Résidentiel & Commercial</option>
+                <option value="tour-bureaux">Immeuble de Bureaux & Cabinets</option>
+              </select>
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="syndic-lots">Nombre de Lots / Appartements *</label>
+              <input type="number" id="syndic-lots" class="kzr-form-input" placeholder="Ex: 24 lots" min="4" max="500" required>
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="syndic-nom">Nom complet ou Représentant *</label>
+              <input type="text" id="syndic-nom" class="kzr-form-input" placeholder="Ex: M. Berrada (Conseil Syndical)" required>
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="syndic-tel">Téléphone de contact *</label>
+              <input type="tel" id="syndic-tel" class="kzr-form-input" placeholder="+212 661-250118" required>
+            </div>
+            <div class="kzr-form-group col-span-2">
+              <label class="kzr-form-label" for="syndic-quartier">Adresse ou Quartier à Casablanca</label>
+              <input type="text" id="syndic-quartier" class="kzr-form-input" placeholder="Ex: Triangle d'Or, Racine, Gauthier, Ain Diab...">
+            </div>
+          </div>
+          <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between;">
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button type="submit" class="kzr-btn kzr-btn-gold gold-shimmer-btn">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Recevoir l'Étude Comparative 24h</span>
+              </button>
+              <a href="https://wa.me/212661250118?text=Bonjour%20KZR,%20je%20souhaite%20un%20devis%20Syndic%20pour%20notre%20copropri%C3%A9t%C3%A9" target="_blank" rel="noopener" class="kzr-btn" style="background:#25D366; color:#fff;">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Devis via WhatsApp</span>
+              </a>
+            </div>
+            <button type="button" class="kzr-btn kzr-btn-outline-gold kzr-pole-deep-dive-btn" data-pole-open="syndic">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Voir le Cahier des Charges Syndic</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ACCORDION SYNDIC ==================== -->
+  <section class="section" style="background-color: var(--color-white); border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">FAQ Syndic de Copropriété</span>
+        <h2 class="section-title">Vos Questions sur Notre Gestion de Syndic</h2>
+        <p class="section-subtitle">
+          Tout savoir sur les assemblées générales, les tarifs, la reprise comptable et nos engagements Loi 18-00.
+        </p>
+      </div>
+
+      <div class="kzr-faq-list">
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Comment KZR Consulting assure-t-elle la conformité à la Loi 18-00 au Maroc ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              KZR Consulting applique rigoureusement les dispositions de la loi 18-00 modifiée par la loi 106-12 : tenue d’un compte bancaire séparé au nom exclusif du syndicat de copropriétaires, tenue scrupuleuse des registres d’assemblées générales, immatriculation au registre national et assurance responsabilité civile dédiée.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Comment se passe le changement de syndic si notre résidence est déjà sous mandat ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Notre équipe juridique vous accompagne gracieusement pour préparer l’ordre du jour de la prochaine AG. Une fois le vote acté, nous organisons la passation sous procès-verbal avec l'ancien syndic, récupérons l'ensemble des archives comptables et techniques, et garantissons la continuité immédiate des services.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Quelle est la stratégie de KZR face aux impayés de charges de copropriété ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Nous privilégions une communication bienveillante et personnalisée avec des facilités de paiement échelonnées. En cas de blocage persistant, nous déclenchons la procédure d'injonction de payer prévue par la loi 18-00 avec le soutien de nos avocats partenaires, protégeant ainsi la trésorerie de votre résidence.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Pouvons-nous combiner le Syndic avec vos pôles Sécurité et Nettoyage ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              C'est la spécialité et la force majeure de KZR Consulting ! Notre formule Pack Multiservices regroupe la gestion de copropriété, les gardiens de sécurité 24/7, l’entretien ménager quotidien et les espaces verts sous un interlocuteur unique avec des tarifs groupés très avantageux.
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -300,6 +434,22 @@
     <button type="button" class="kzr-back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
   </aside>
 
+  <!-- ==================== POLE DEEP-DIVE MODAL SKELETON ==================== -->
+  <div id="kzr-pole-modal" class="kzr-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="kzr-modal-title">
+    <div class="kzr-modal-backdrop" id="kzr-modal-backdrop" data-modal-close></div>
+    <div class="kzr-modal-dialog" role="document">
+      <button type="button" class="kzr-modal-close" id="kzr-modal-close-btn" data-modal-close aria-label="Fermer la fenêtre de détail">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="kzr-modal-content" id="kzr-modal-dynamic-content">
+        <!-- Content dynamically rendered via modal.js -->
+      </div>
+    </div>
+  </div>
+
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/interactive.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/contact.js"></script>
 </body>
 </html>

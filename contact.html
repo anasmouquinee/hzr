@@ -121,7 +121,7 @@
   <section class="kzr-page-hero">
     <div class="kzr-page-hero-pattern"></div>
     <div class="container">
-      <nav class="kzr-breadcrumbs">
+      <nav class="kzr-breadcrumbs" aria-label="Fil d'ariane">
         <a href="index.html">Accueil</a>
         <i class="fa-solid fa-chevron-right"></i>
         <span>Contact & Devis</span>
@@ -132,6 +132,16 @@
       <p class="kzr-page-hero-subtitle">
         Nos gestionnaires et experts techniques sont à votre écoute à Casablanca pour étudier vos besoins et planifier une visite sur place sans engagement.
       </p>
+      <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <a href="#kzr-quote-form" class="kzr-btn kzr-btn-gold gold-shimmer-btn">
+          <i class="fa-solid fa-file-invoice"></i>
+          <span>Formulaire Express Devis</span>
+        </a>
+        <button type="button" class="kzr-btn kzr-btn-outline-white kzr-pole-deep-dive-btn" data-pole-open="syndic" aria-label="Consulter les fiches des 6 pôles">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Consulter les Fiches Pôles</span>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -140,7 +150,7 @@
     <div class="container kzr-contact-split">
       <!-- Left Sidebar: Direct Coordinates -->
       <aside class="kzr-contact-sidebar">
-        <div class="kzr-contact-info-card">
+        <div class="kzr-contact-info-card tilt-card glass-card">
           <div class="kzr-contact-card-icon"><i class="fa-solid fa-building"></i></div>
           <div class="kzr-contact-card-content">
             <h4>Siège Social</h4>
@@ -149,7 +159,7 @@
           </div>
         </div>
 
-        <div class="kzr-contact-info-card">
+        <div class="kzr-contact-info-card tilt-card glass-card">
           <div class="kzr-contact-card-icon"><i class="fa-solid fa-phone"></i></div>
           <div class="kzr-contact-card-content">
             <h4>Ligne Directe & Astreinte</h4>
@@ -158,7 +168,7 @@
           </div>
         </div>
 
-        <div class="kzr-contact-info-card">
+        <div class="kzr-contact-info-card tilt-card glass-card">
           <div class="kzr-contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
           <div class="kzr-contact-card-content">
             <h4>Courrier Électronique</h4>
@@ -167,7 +177,7 @@
           </div>
         </div>
 
-        <div class="kzr-contact-info-card">
+        <div class="kzr-contact-info-card tilt-card glass-card">
           <div class="kzr-contact-card-icon"><i class="fa-solid fa-clock"></i></div>
           <div class="kzr-contact-card-content">
             <h4>Horaires d'Ouverture</h4>
@@ -190,7 +200,7 @@
       </aside>
 
       <!-- Right Column: Interactive Form -->
-      <div class="kzr-form-card">
+      <div class="kzr-form-card glass-card">
         <h3 style="margin-bottom: 0.5rem; font-size: 1.6rem; color: var(--color-navy-950);">Demander un Rendez-vous / Devis</h3>
         <p style="margin-bottom: 2rem; color: var(--text-muted);">
           Remplissez le formulaire ci-dessous. Un gestionnaire KZR étudiera votre dossier et vous contactera sous 24h ouvrées.
@@ -239,7 +249,7 @@
           </div>
 
           <div style="margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-            <button type="submit" class="kzr-btn kzr-btn-gold kzr-btn-lg">
+            <button type="submit" class="kzr-btn kzr-btn-gold kzr-btn-lg gold-shimmer-btn">
               <i class="fa-solid fa-paper-plane"></i>
               <span>Envoyer ma Demande</span>
             </button>
@@ -251,6 +261,69 @@
 
           <div id="form-feedback" class="kzr-form-feedback"></div>
         </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ACCORDION CONTACT ==================== -->
+  <section class="section" style="background-color: var(--color-white); border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Assistance & Démarches</span>
+        <h2 class="section-title">Questions Fréquentes sur Nos Devis</h2>
+        <p class="section-subtitle">
+          Retrouvez les réponses aux interrogations les plus fréquentes avant de nous solliciter.
+        </p>
+      </div>
+
+      <div class="kzr-faq-list" style="max-width: 900px; margin: 0 auto;">
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Quel est le délai garanti pour la réception de notre devis ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Notre charte d'engagement client garantit l'émission d'une estimation technique et tarifaire détaillée sous <strong>24 heures ouvrées</strong> après réception de votre formulaire ou à l'issue de la visite sur site.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>La visite préalable de repérage technique est-elle payante ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Non, nos visites de repérage et diagnostics techniques sont entièrement <strong>gratuits et sans engagement</strong> dans l'ensemble du Grand Casablanca et les zones limitrophes.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Peut-on obtenir un contrat unique combinant plusieurs pôles ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Absolument ! Notre formule <strong>Pack Synergie Multiservices</strong> regroupe par exemple le Syndic, la Sécurité, le Nettoyage et les Espaces Verts au sein d'une convention unique, avec une remise tarifaire groupée et un interlocuteur unique.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Comment contacter le service d'astreinte en cas d'urgence technique ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Nos clients sous contrat disposent d'un numéro d'astreinte d'urgence dédié joignable 24h/24 et 7j/7 (+212 661-250118) pour déclencher une intervention technique prioritaire sous 2 heures.
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -303,7 +376,22 @@
     <button type="button" class="kzr-back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
   </aside>
 
+  <!-- ==================== POLE DEEP-DIVE MODAL SKELETON ==================== -->
+  <div id="kzr-pole-modal" class="kzr-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="kzr-modal-title">
+    <div class="kzr-modal-backdrop" id="kzr-modal-backdrop" data-modal-close></div>
+    <div class="kzr-modal-dialog" role="document">
+      <button type="button" class="kzr-modal-close" id="kzr-modal-close-btn" data-modal-close aria-label="Fermer la fenêtre de détail">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="kzr-modal-content" id="kzr-modal-dynamic-content">
+        <!-- Content dynamically rendered via modal.js -->
+      </div>
+    </div>
+  </div>
+
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/interactive.js"></script>
+  <script src="assets/js/modal.js"></script>
   <script src="assets/js/contact.js"></script>
 </body>
 </html>

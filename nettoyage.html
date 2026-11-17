@@ -121,7 +121,7 @@
   <section class="kzr-page-hero">
     <div class="kzr-page-hero-pattern"></div>
     <div class="container">
-      <nav class="kzr-breadcrumbs">
+      <nav class="kzr-breadcrumbs" aria-label="Fil d'Ariane">
         <a href="index.html">Accueil</a>
         <i class="fa-solid fa-chevron-right"></i>
         <span>Pôle 03</span>
@@ -134,6 +134,16 @@
       <p class="kzr-page-hero-subtitle">
         Des espaces étincelants, des protocoles de désinfection certifiés et des équipes formées aux standards d'hygiène les plus stricts pour vos bureaux et parties communes.
       </p>
+      <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <a href="#devis-rapide" class="kzr-btn kzr-btn-gold gold-shimmer-btn">
+          <i class="fa-solid fa-calculator"></i>
+          <span>Devis Express Nettoyage</span>
+        </a>
+        <button type="button" class="kzr-btn kzr-btn-outline-white kzr-pole-deep-dive-btn" data-pole-open="nettoyage" aria-label="Consulter les spécifications et certifications du Pôle Nettoyage">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Fiche Technique & Équipements</span>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -149,7 +159,7 @@
       </div>
 
       <div class="kzr-service-prestations-grid">
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/nettoyage-bureaux.jpg" alt="Nettoyage quotidien de bureaux à Casablanca" class="kzr-prestation-img">
           </div>
@@ -159,7 +169,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/nettoyage-residences.jpg" alt="Entretien des parties communes de résidences" class="kzr-prestation-img">
           </div>
@@ -169,7 +179,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/nettoyage-vitres.jpg" alt="Nettoyage vitrerie en hauteur" class="kzr-prestation-img">
           </div>
@@ -179,7 +189,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/nettoyage-chantier.jpg" alt="Remise en état après travaux" class="kzr-prestation-img">
           </div>
@@ -189,7 +199,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/nettoyage-desinfection.jpg" alt="Désinfection et lutte 3D" class="kzr-prestation-img">
           </div>
@@ -199,13 +209,144 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/nettoyage-moquettes.jpg" alt="Traitement des moquettes et marbre" class="kzr-prestation-img">
           </div>
           <div class="kzr-prestation-body">
             <h4>Moquettes, Marbre & Cristallisation</h4>
             <p>Nettoyage vapeur/injection-extraction des moquettes, décapage et cristallisation haute brillance des marbres et carrelages anciens.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== QUICK DEVIS WIDGET NETTOYAGE ==================== -->
+  <section class="section section-dark" id="devis-rapide" style="background: linear-gradient(135deg, var(--color-navy-950), var(--color-navy-900));">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-dark">Calculateur Express</span>
+        <h2 class="section-title">Devis Express Propreté & Nettoyage</h2>
+        <p class="section-subtitle">
+          Définissez votre surface et votre fréquence de passage pour recevoir un devis détaillé sous 24h ouvrées.
+        </p>
+      </div>
+
+      <div class="kzr-form-card glass-card-dark" style="max-width: 860px; margin: 0 auto;">
+        <form class="kzr-quick-devis-form" data-pole="nettoyage">
+          <div class="kzr-form-grid">
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="net-type">Type de Locaux *</label>
+              <select id="net-type" class="kzr-form-select" required>
+                <option value="bureaux">Bureaux professionnels / Open-space</option>
+                <option value="copropriete">Parties communes d'immeuble / Copropriété</option>
+                <option value="commercial">Showroom / Clinique / Agence commerciale</option>
+                <option value="chantier">Remise en état fin de chantier / Travaux</option>
+                <option value="vitrerie">Vitrerie seule & Façade vitrée</option>
+              </select>
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="net-surface">Surface estimée (m²) *</label>
+              <input type="number" id="net-surface" class="kzr-form-input" placeholder="Ex: 250 m²" min="20" max="10000" required>
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="net-frequence">Rythme d'Intervention *</label>
+              <select id="net-frequence" class="kzr-form-select" required>
+                <option value="quotidien">Quotidien (5 à 7 j/semaine)</option>
+                <option value="trihebdo">3 fois par semaine</option>
+                <option value="bihebdo">2 fois par semaine</option>
+                <option value="hebdo">Hebdomadaire</option>
+                <option value="one-shot">Intervention Ponctuelle / Remise en état</option>
+              </select>
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="net-tel">Téléphone de contact *</label>
+              <input type="tel" id="net-tel" class="kzr-form-input" placeholder="+212 661-250118" required>
+            </div>
+            <div class="kzr-form-group col-span-2">
+              <label class="kzr-form-label" for="net-nom">Nom complet ou Entreprise *</label>
+              <input type="text" id="net-nom" class="kzr-form-input" placeholder="Ex: Société XYZ / M. Bennis" required>
+            </div>
+          </div>
+          <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between;">
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button type="submit" class="kzr-btn kzr-btn-gold gold-shimmer-btn">
+                <i class="fa-solid fa-broom"></i>
+                <span>Recevoir le Chiffrage Nettoyage</span>
+              </button>
+              <a href="https://wa.me/212661250118?text=Bonjour%20KZR,%20je%20souhaite%20un%20devis%20de%20Nettoyage%20Professionnel" target="_blank" rel="noopener" class="kzr-btn" style="background:#25D366; color:#fff;">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp Nettoyage</span>
+              </a>
+            </div>
+            <button type="button" class="kzr-btn kzr-btn-outline-gold kzr-pole-deep-dive-btn" data-pole-open="nettoyage">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Matériel & Normes Sanitaires</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ACCORDION NETTOYAGE ==================== -->
+  <section class="section" style="background-color: var(--color-white); border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">FAQ Nettoyage Professionnel</span>
+        <h2 class="section-title">Tout Savoir sur Nos Prestations de Propreté</h2>
+        <p class="section-subtitle">
+          Questions courantes sur nos produits certifiés, notre matériel et nos protocoles d'hygiène.
+        </p>
+      </div>
+
+      <div class="kzr-faq-list">
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Quels types de produits nettoyants et désinfectants utilisez-vous ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Nous utilisons exclusivement des produits éco-labellisés conformes aux fiches de données de sécurité (FDS), sans solvants agressifs ni composés toxiques. Nos désinfectants répondent aux normes bactéricides, fongicides et virucides européennes (EN 14476).
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Intervenez-vous en dehors des heures de bureau ou la nuit ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Oui, nous adaptons nos horaires d'intervention à vos impératifs d'activité : tôt le matin avant 08h00, en soirée après 18h30 ou le week-end, garantissant zéro perturbation pour vos collaborateurs et vos clients.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Fournissez-vous également les consommables d'hygiène et sanitaires ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Oui, sur demande, nous intégrons la fourniture et le réassort continu des consommables sanitaires : savon mousse hypoallergénique, essuie-mains pure ouate, papier hygiénique confort et diffuseurs de parfum d'ambiance haut de gamme.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Quel est votre délai pour une remise en état express après travaux ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Notre équipe d'intervention lourde peut être mobilisée sous 24 à 48 heures à Casablanca avec autolaveuses industrielles, monobrosses à haute vitesse et aspirateurs industriels pour livrer un espace prêt à emménager.
+            </div>
           </div>
         </div>
       </div>
@@ -274,6 +415,22 @@
     <button type="button" class="kzr-back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
   </aside>
 
+  <!-- ==================== POLE DEEP-DIVE MODAL SKELETON ==================== -->
+  <div id="kzr-pole-modal" class="kzr-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="kzr-modal-title">
+    <div class="kzr-modal-backdrop" id="kzr-modal-backdrop" data-modal-close></div>
+    <div class="kzr-modal-dialog" role="document">
+      <button type="button" class="kzr-modal-close" id="kzr-modal-close-btn" data-modal-close aria-label="Fermer la fenêtre de détail">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="kzr-modal-content" id="kzr-modal-dynamic-content">
+        <!-- Content dynamically rendered via modal.js -->
+      </div>
+    </div>
+  </div>
+
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/interactive.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/contact.js"></script>
 </body>
 </html>

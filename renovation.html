@@ -121,7 +121,7 @@
   <section class="kzr-page-hero">
     <div class="kzr-page-hero-pattern"></div>
     <div class="container">
-      <nav class="kzr-breadcrumbs">
+      <nav class="kzr-breadcrumbs" aria-label="Fil d'Ariane">
         <a href="index.html">Accueil</a>
         <i class="fa-solid fa-chevron-right"></i>
         <span>Pôle 04</span>
@@ -134,6 +134,16 @@
       <p class="kzr-page-hero-subtitle">
         Réhabilitation complète, étanchéité de toitures, peinture haut de gamme et dépannages d'urgence avec un suivi technique méticuleux et des garanties solides.
       </p>
+      <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <a href="#devis-rapide" class="kzr-btn kzr-btn-gold gold-shimmer-btn">
+          <i class="fa-solid fa-calculator"></i>
+          <span>Devis Express Rénovation</span>
+        </a>
+        <button type="button" class="kzr-btn kzr-btn-outline-white kzr-pole-deep-dive-btn" data-pole-open="renovation" aria-label="Consulter les spécifications et garanties du Pôle Rénovation">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Garanties & Spécifications Travaux</span>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -149,7 +159,7 @@
       </div>
 
       <div class="kzr-service-prestations-grid">
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/renovation-peinture.jpg" alt="Peinture et enduits de finition" class="kzr-prestation-img">
           </div>
@@ -159,7 +169,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/renovation-etancheite.jpg" alt="Étanchéité de toitures et terrasses" class="kzr-prestation-img">
           </div>
@@ -169,7 +179,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/renovation-plomberie.jpg" alt="Plomberie sanitaire et dépannages" class="kzr-prestation-img">
           </div>
@@ -179,7 +189,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/renovation-electricite.jpg" alt="Électricité générale du bâtiment" class="kzr-prestation-img">
           </div>
@@ -189,7 +199,7 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/renovation-revetements.jpg" alt="Pose de carrelage et parquet" class="kzr-prestation-img">
           </div>
@@ -199,13 +209,139 @@
           </div>
         </div>
 
-        <div class="kzr-prestation-card">
+        <div class="kzr-prestation-card tilt-card glass-card">
           <div class="kzr-prestation-thumb">
             <img src="assets/images/renovation-facades.jpg" alt="Ravalement de façade à Casablanca" class="kzr-prestation-img">
           </div>
           <div class="kzr-prestation-body">
             <h4>Ravalement de Façades & Cloisons</h4>
             <p>Traitement des fissures structurelles, crépi décoratif monocouche, cloisons en plaques de plâtre (BA13) et faux-plafonds décoratifs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== QUICK DEVIS WIDGET RÉNOVATION ==================== -->
+  <section class="section section-dark" id="devis-rapide" style="background: linear-gradient(135deg, var(--color-navy-950), var(--color-navy-900));">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-dark">Diagnostic Gratuit</span>
+        <h2 class="section-title">Estimation Express Rénovation & Travaux</h2>
+        <p class="section-subtitle">
+          Décrivez brièvement la nature de votre chantier pour convenir d'une visite sur site et recevoir une proposition détaillée.
+        </p>
+      </div>
+
+      <div class="kzr-form-card glass-card-dark" style="max-width: 860px; margin: 0 auto;">
+        <form class="kzr-quick-devis-form" data-pole="renovation">
+          <div class="kzr-form-grid">
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="reno-corps">Type de Travaux Principal *</label>
+              <select id="reno-corps" class="kzr-form-select" required>
+                <option value="peinture">Peinture intérieure / Ravalement de façade</option>
+                <option value="etancheite">Étanchéité terrasse / Traitement infiltrations</option>
+                <option value="renovation-complete">Rénovation complète tout corps d'état</option>
+                <option value="plomberie-elec">Plomberie & Électricité / Remise aux normes</option>
+                <option value="revetement-sol">Carrelage, Marbre & Parquet</option>
+                <option value="depannage-urgent">Dépannage technique urgent</option>
+              </select>
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="reno-surface">Surface concernée (m²) approximative</label>
+              <input type="number" id="reno-surface" class="kzr-form-input" placeholder="Ex: 120 m²">
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="reno-nom">Nom complet ou Entreprise *</label>
+              <input type="text" id="reno-nom" class="kzr-form-input" placeholder="Ex: M. Berrada / Cabinet Dr. X" required>
+            </div>
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="reno-tel">Téléphone de contact *</label>
+              <input type="tel" id="reno-tel" class="kzr-form-input" placeholder="+212 661-250118" required>
+            </div>
+            <div class="kzr-form-group col-span-2">
+              <label class="kzr-form-label" for="reno-details">Détails ou urgence du projet</label>
+              <input type="text" id="reno-details" class="kzr-form-input" placeholder="Ex: Fuite toiture terrasse, rénovation avant vente, peinture bureaux...">
+            </div>
+          </div>
+          <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between;">
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button type="submit" class="kzr-btn kzr-btn-gold gold-shimmer-btn">
+                <i class="fa-solid fa-trowel-bricks"></i>
+                <span>Planifier un Diagnostic sous 24h</span>
+              </button>
+              <a href="https://wa.me/212661250118?text=Bonjour%20KZR,%20je%20souhaite%20un%20devis%20de%20R%C3%A9novation%20Travaux" target="_blank" rel="noopener" class="kzr-btn" style="background:#25D366; color:#fff;">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp Travaux</span>
+              </a>
+            </div>
+            <button type="button" class="kzr-btn kzr-btn-outline-gold kzr-pole-deep-dive-btn" data-pole-open="renovation">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Fiche Technique Travaux & Garanties</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ACCORDION RÉNOVATION ==================== -->
+  <section class="section" style="background-color: var(--color-white); border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">FAQ Rénovation & Travaux</span>
+        <h2 class="section-title">Tout Ce Qu'il Faut Savoir Avant Vos Travaux</h2>
+        <p class="section-subtitle">
+          Questions courantes sur nos garanties, la propreté du chantier et le suivi par conducteur de travaux.
+        </p>
+      </div>
+
+      <div class="kzr-faq-list">
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Vos travaux d'étanchéité et de gros œuvre sont-ils garantis ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Absolument. Nos travaux d'étanchéité de toitures-terrasses bénéficient d'une garantie décennale contractuelle. Nous utilisons des matériaux de premier choix certifiés CSTB et appliquons des tests d'étanchéité par mise en eau pendant 48 heures avant validation définitive.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Comment garantissez-vous le respect du calendrier et du budget ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Chaque chantier fait l'objet d'un planning prévisionnel détaillé remis lors de la signature du devis. Un conducteur de travaux KZR dédié supervise quotidiennement les équipes, organise des réunions de chantier hebdomadaires et vous transmet un rapport d'avancement photographique.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>La visite de repérage et le devis technique sont-ils gratuits ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Oui, dans tout le Grand Casablanca, nos techniciens se déplacent sans aucun frais pour analyser les contraintes structurelles, prendre les cotes exactes et vous établir une proposition ferme et détaillée sous 24h ouvrées.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Prenez-vous en charge le nettoyage complet à la fin du chantier ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Grâce à notre pôle Nettoyage intégré, chaque chantier de rénovation KZR se termine par une remise en état en profondeur offerte : évacuation des gravats, lessivage des vitres et décapage des sols pour une remise des clés prête à l'usage.
+            </div>
           </div>
         </div>
       </div>
@@ -274,6 +410,22 @@
     <button type="button" class="kzr-back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
   </aside>
 
+  <!-- ==================== POLE DEEP-DIVE MODAL SKELETON ==================== -->
+  <div id="kzr-pole-modal" class="kzr-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="kzr-modal-title">
+    <div class="kzr-modal-backdrop" id="kzr-modal-backdrop" data-modal-close></div>
+    <div class="kzr-modal-dialog" role="document">
+      <button type="button" class="kzr-modal-close" id="kzr-modal-close-btn" data-modal-close aria-label="Fermer la fenêtre de détail">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="kzr-modal-content" id="kzr-modal-dynamic-content">
+        <!-- Content dynamically rendered via modal.js -->
+      </div>
+    </div>
+  </div>
+
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/interactive.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/contact.js"></script>
 </body>
 </html>

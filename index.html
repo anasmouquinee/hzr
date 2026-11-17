@@ -183,6 +183,8 @@
 
   <!-- ==================== HERO SECTION ==================== -->
   <section class="kzr-hero">
+    <!-- Ambient Luxury Golden Particles Canvas -->
+    <canvas id="kzr-hero-canvas" class="kzr-hero-canvas" aria-hidden="true"></canvas>
     <div class="kzr-hero-pattern"></div>
     <div class="container kzr-hero-grid">
       <div class="kzr-hero-content">
@@ -199,7 +201,7 @@
         </p>
 
         <div class="kzr-hero-actions">
-          <a href="#simulateur" class="kzr-btn kzr-btn-gold kzr-btn-lg">
+          <a href="#simulateur" class="kzr-btn kzr-btn-gold kzr-btn-lg gold-shimmer-btn">
             <i class="fa-solid fa-calculator"></i>
             <span>Simuler Mon Projet</span>
           </a>
@@ -281,9 +283,29 @@
         </p>
       </div>
 
+      <!-- Pole Category Filter Pills -->
+      <div class="kzr-filter-bar" role="tablist" aria-label="Filtrer les 6 Pôles d'Expertise">
+        <button type="button" class="kzr-filter-pill active" data-filter="all" role="tab" aria-selected="true">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>Tous les Pôles (6)</span>
+        </button>
+        <button type="button" class="kzr-filter-pill" data-filter="copropriete" role="tab" aria-selected="false">
+          <i class="fa-solid fa-building"></i>
+          <span>Copropriétés</span>
+        </button>
+        <button type="button" class="kzr-filter-pill" data-filter="entreprise" role="tab" aria-selected="false">
+          <i class="fa-solid fa-briefcase"></i>
+          <span>Entreprises & Bureaux</span>
+        </button>
+        <button type="button" class="kzr-filter-pill" data-filter="particulier" role="tab" aria-selected="false">
+          <i class="fa-solid fa-house-chimney-user"></i>
+          <span>Résidences & Particuliers</span>
+        </button>
+      </div>
+
       <div class="kzr-poles-grid">
         <!-- Pôle 01: Syndic -->
-        <article class="kzr-pole-card">
+        <article class="kzr-pole-card tilt-card" data-category="copropriete" data-pole="syndic" data-pole-id="syndic">
           <div class="kzr-pole-thumb">
             <span class="kzr-pole-tag">Pôle 01</span>
             <img src="assets/images/syndic-copropriete-casablanca.jpg" alt="Syndic de copropriété à Casablanca" class="kzr-pole-img">
@@ -299,8 +321,12 @@
               <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Recouvrement & assistance juridique</div>
             </div>
             <div class="kzr-pole-footer">
+              <button type="button" class="kzr-btn kzr-btn-sm kzr-btn-outline-gold kzr-pole-modal-trigger kzr-pole-deep-dive-btn" data-pole="syndic" data-pole-open="syndic" aria-label="Consulter la fiche détaillée Syndic de Copropriété">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Fiche Pôle</span>
+              </button>
               <a href="syndic.html" class="kzr-pole-link">
-                <span>Découvrir le Pôle Syndic</span>
+                <span>Découvrir</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
@@ -308,7 +334,7 @@
         </article>
 
         <!-- Pôle 02: Sécurité -->
-        <article class="kzr-pole-card">
+        <article class="kzr-pole-card tilt-card" data-category="copropriete entreprise particulier" data-pole="securite" data-pole-id="securite">
           <div class="kzr-pole-thumb">
             <span class="kzr-pole-tag">Pôle 02</span>
             <img src="assets/images/securite-gardiennage-casablanca.jpg" alt="Sécurité et gardiennage à Casablanca" class="kzr-pole-img">
@@ -324,8 +350,12 @@
               <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Ronde de nuit & astreinte d'urgence</div>
             </div>
             <div class="kzr-pole-footer">
+              <button type="button" class="kzr-btn kzr-btn-sm kzr-btn-outline-gold kzr-pole-modal-trigger kzr-pole-deep-dive-btn" data-pole="securite" data-pole-open="securite" aria-label="Consulter la fiche détaillée Sécurité & Gardiennage">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Fiche Pôle</span>
+              </button>
               <a href="securite.html" class="kzr-pole-link">
-                <span>Découvrir le Pôle Sécurité</span>
+                <span>Découvrir</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
@@ -333,7 +363,7 @@
         </article>
 
         <!-- Pôle 03: Nettoyage -->
-        <article class="kzr-pole-card">
+        <article class="kzr-pole-card tilt-card" data-category="copropriete entreprise particulier" data-pole="nettoyage" data-pole-id="nettoyage">
           <div class="kzr-pole-thumb">
             <span class="kzr-pole-tag">Pôle 03</span>
             <img src="assets/images/nettoyage-professionnel-casablanca.jpg" alt="Nettoyage professionnel à Casablanca" class="kzr-pole-img">
@@ -349,8 +379,12 @@
               <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Remise en état après travaux</div>
             </div>
             <div class="kzr-pole-footer">
+              <button type="button" class="kzr-btn kzr-btn-sm kzr-btn-outline-gold kzr-pole-modal-trigger kzr-pole-deep-dive-btn" data-pole="nettoyage" data-pole-open="nettoyage" aria-label="Consulter la fiche détaillée Nettoyage Professionnel">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Fiche Pôle</span>
+              </button>
               <a href="nettoyage.html" class="kzr-pole-link">
-                <span>Découvrir le Pôle Nettoyage</span>
+                <span>Découvrir</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
@@ -358,7 +392,7 @@
         </article>
 
         <!-- Pôle 04: Rénovation -->
-        <article class="kzr-pole-card">
+        <article class="kzr-pole-card tilt-card" data-category="copropriete entreprise particulier" data-pole="renovation" data-pole-id="renovation">
           <div class="kzr-pole-thumb">
             <span class="kzr-pole-tag">Pôle 04</span>
             <img src="assets/images/renovation-travaux-casablanca.jpg" alt="Rénovation et travaux à Casablanca" class="kzr-pole-img">
@@ -374,8 +408,12 @@
               <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Dépannages plomberie & électricité</div>
             </div>
             <div class="kzr-pole-footer">
+              <button type="button" class="kzr-btn kzr-btn-sm kzr-btn-outline-gold kzr-pole-modal-trigger kzr-pole-deep-dive-btn" data-pole="renovation" data-pole-open="renovation" aria-label="Consulter la fiche détaillée Rénovation & Travaux">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Fiche Pôle</span>
+              </button>
               <a href="renovation.html" class="kzr-pole-link">
-                <span>Découvrir le Pôle Travaux</span>
+                <span>Découvrir</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
@@ -383,7 +421,7 @@
         </article>
 
         <!-- Pôle 05: Aménagement & Déco -->
-        <article class="kzr-pole-card">
+        <article class="kzr-pole-card tilt-card" data-category="entreprise particulier" data-pole="amenagement" data-pole-id="amenagement">
           <div class="kzr-pole-thumb">
             <span class="kzr-pole-tag">Pôle 05</span>
             <img src="assets/images/amenagement-interieur-casablanca.jpg" alt="Aménagement d'intérieur à Casablanca" class="kzr-pole-img">
@@ -399,8 +437,12 @@
               <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Cuisines & menuiserie personnalisées</div>
             </div>
             <div class="kzr-pole-footer">
+              <button type="button" class="kzr-btn kzr-btn-sm kzr-btn-outline-gold kzr-pole-modal-trigger kzr-pole-deep-dive-btn" data-pole="amenagement" data-pole-open="amenagement" aria-label="Consulter la fiche détaillée Aménagement & Déco">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Fiche Pôle</span>
+              </button>
               <a href="amenagement-decoration.html" class="kzr-pole-link">
-                <span>Découvrir le Pôle Déco</span>
+                <span>Découvrir</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
@@ -408,7 +450,7 @@
         </article>
 
         <!-- Pôle 06: Espaces Verts -->
-        <article class="kzr-pole-card">
+        <article class="kzr-pole-card tilt-card" data-category="copropriete entreprise particulier" data-pole="espaces-verts" data-pole-id="espaces-verts">
           <div class="kzr-pole-thumb">
             <span class="kzr-pole-tag">Pôle 06</span>
             <img src="assets/images/espaces-verts-jardin-casablanca.jpg" alt="Espaces verts et jardins à Casablanca" class="kzr-pole-img">
@@ -424,8 +466,12 @@
               <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Tonte, taille d'arbres & élagage</div>
             </div>
             <div class="kzr-pole-footer">
+              <button type="button" class="kzr-btn kzr-btn-sm kzr-btn-outline-gold kzr-pole-modal-trigger kzr-pole-deep-dive-btn" data-pole="espaces-verts" data-pole-open="espaces-verts" aria-label="Consulter la fiche détaillée Espaces Verts & Paysage">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Fiche Pôle</span>
+              </button>
               <a href="espaces-verts.html" class="kzr-pole-link">
-                <span>Découvrir le Pôle Paysage</span>
+                <span>Découvrir</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
@@ -572,6 +618,10 @@
                 <i class="fa-solid fa-file-signature"></i>
                 <span>Finaliser ma Demande de Devis</span>
               </a>
+              <button type="button" id="sim-print-btn" class="kzr-btn kzr-btn-outline-gold" aria-label="Imprimer ou exporter le récapitulatif de devis">
+                <i class="fa-solid fa-print"></i>
+                <span>Imprimer / Exporter le Devis</span>
+              </button>
             </div>
           </div>
         </div>
@@ -623,7 +673,7 @@
       </div>
 
       <div class="kzr-pillars-grid">
-        <div class="kzr-pillar-card">
+        <div class="kzr-pillar-card tilt-card glass-card">
           <div class="kzr-pillar-icon"><i class="fa-solid fa-user-shield"></i></div>
           <h3 class="kzr-pillar-title">Interlocuteur Unique</h3>
           <p class="kzr-pillar-desc">
@@ -631,7 +681,7 @@
           </p>
         </div>
 
-        <div class="kzr-pillar-card">
+        <div class="kzr-pillar-card tilt-card glass-card">
           <div class="kzr-pillar-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
           <h3 class="kzr-pillar-title">Réactivité Sous 24h</h3>
           <p class="kzr-pillar-desc">
@@ -639,7 +689,7 @@
           </p>
         </div>
 
-        <div class="kzr-pillar-card">
+        <div class="kzr-pillar-card tilt-card glass-card">
           <div class="kzr-pillar-icon"><i class="fa-solid fa-medal"></i></div>
           <h3 class="kzr-pillar-title">Équipes Qualifiées</h3>
           <p class="kzr-pillar-desc">
@@ -647,7 +697,7 @@
           </p>
         </div>
 
-        <div class="kzr-pillar-card">
+        <div class="kzr-pillar-card tilt-card glass-card">
           <div class="kzr-pillar-icon"><i class="fa-solid fa-file-circle-check"></i></div>
           <h3 class="kzr-pillar-title">Transparence Totale</h3>
           <p class="kzr-pillar-desc">
@@ -669,59 +719,88 @@
         </p>
       </div>
 
-      <div class="kzr-testimonials-grid">
-        <div class="kzr-testimonial-card">
-          <div>
-            <div class="kzr-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+      <!-- Testimonials Interactive Carousel -->
+      <div class="kzr-carousel" id="kzr-testimonials-carousel" aria-roledescription="carousel" aria-label="Témoignages clients KZR Consulting">
+        <div class="kzr-carousel-viewport">
+          <div class="kzr-carousel-track">
+            <!-- Slide 1 -->
+            <div class="kzr-carousel-slide active" role="group" aria-roledescription="slide" aria-label="1 sur 3" data-index="0">
+              <div class="kzr-testimonial-card glass-card">
+                <div>
+                  <div class="kzr-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="kzr-quote-text">
+                    "La reprise du syndic de notre résidence à Anfa par KZR a complètement assaini nos comptes. Les assemblées générales sont claires, la sécurité est enfin irréprochable et les espaces verts resplendissent."
+                  </p>
+                </div>
+                <div class="kzr-client-info">
+                  <div class="kzr-client-avatar">MB</div>
+                  <div class="kzr-client-meta">
+                    <h5>M. Berrada</h5>
+                    <p>Président du Conseil Syndical • Casablanca Anfa</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p class="kzr-quote-text">
-              "La reprise du syndic de notre résidence à Anfa par KZR a complètement assaini nos comptes. Les assemblées générales sont claires, la sécurité est enfin irréprochable et les espaces verts resplendissent."
-            </p>
-          </div>
-          <div class="kzr-client-info">
-            <div class="kzr-client-avatar">MB</div>
-            <div class="kzr-client-meta">
-              <h5>M. Berrada</h5>
-              <p>Président du Conseil Syndical • Casablanca Anfa</p>
+
+            <!-- Slide 2 -->
+            <div class="kzr-carousel-slide" role="group" aria-roledescription="slide" aria-label="2 sur 3" data-index="1">
+              <div class="kzr-testimonial-card glass-card">
+                <div>
+                  <div class="kzr-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="kzr-quote-text">
+                    "KZR Consulting gère le nettoyage quotidien de nos 1 200 m² de bureaux et la sécurité de notre siège. Le suivi est rigoureux et le gestionnaire dédié répond à chaque sollicitation en moins d’une heure."
+                  </p>
+                </div>
+                <div class="kzr-client-info">
+                  <div class="kzr-client-avatar">SL</div>
+                  <div class="kzr-client-meta">
+                    <h5>Samia L.</h5>
+                    <p>Responsable des Services Généraux • Sidi Maârouf</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="kzr-carousel-slide" role="group" aria-roledescription="slide" aria-label="3 sur 3" data-index="2">
+              <div class="kzr-testimonial-card glass-card">
+                <div>
+                  <div class="kzr-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="kzr-quote-text">
+                    "Nous avons confié à KZR la rénovation des parties communes et l’étanchéité des terrasses de notre complexe à Bouskoura. Délais respectés au jour près et budget maîtrisé sans surprise."
+                  </p>
+                </div>
+                <div class="kzr-client-info">
+                  <div class="kzr-client-avatar">KA</div>
+                  <div class="kzr-client-meta">
+                    <h5>Karim Alami</h5>
+                    <p>Administrateur de Biens • Bouskoura</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="kzr-testimonial-card">
-          <div>
-            <div class="kzr-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="kzr-quote-text">
-              "KZR Consulting gère le nettoyage quotidien de nos 1 200 m² de bureaux et la sécurité de notre siège. Le suivi est rigoureux et le gestionnaire dédié répond à chaque sollicitation en moins d’une heure."
-            </p>
+        <!-- Carousel Navigation Controls -->
+        <div class="kzr-carousel-controls">
+          <button type="button" class="kzr-carousel-btn kzr-carousel-prev" aria-label="Témoignage précédent">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="kzr-carousel-dots" role="tablist" aria-label="Pagination des témoignages">
+            <button type="button" class="kzr-carousel-dot active" role="tab" aria-selected="true" aria-label="Témoignage 1" data-index="0"></button>
+            <button type="button" class="kzr-carousel-dot" role="tab" aria-selected="false" aria-label="Témoignage 2" data-index="1"></button>
+            <button type="button" class="kzr-carousel-dot" role="tab" aria-selected="false" aria-label="Témoignage 3" data-index="2"></button>
           </div>
-          <div class="kzr-client-info">
-            <div class="kzr-client-avatar">SL</div>
-            <div class="kzr-client-meta">
-              <h5>Samia L.</h5>
-              <p>Responsable des Services Généraux • Sidi Maârouf</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="kzr-testimonial-card">
-          <div>
-            <div class="kzr-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="kzr-quote-text">
-              "Nous avons confié à KZR la rénovation des parties communes et l’étanchéité des terrasses de notre complexe à Bouskoura. Délais respectés au jour près et budget maîtrisé sans surprise."
-            </p>
-          </div>
-          <div class="kzr-client-info">
-            <div class="kzr-client-avatar">KA</div>
-            <div class="kzr-client-meta">
-              <h5>Karim Alami</h5>
-              <p>Administrateur de Biens • Bouskoura</p>
-            </div>
-          </div>
+          <button type="button" class="kzr-carousel-btn kzr-carousel-next" aria-label="Témoignage suivant">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -959,10 +1038,25 @@
     </button>
   </aside>
 
+  <!-- ==================== POLE DEEP-DIVE MODAL SKELETON ==================== -->
+  <div id="kzr-pole-modal" class="kzr-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="kzr-modal-title">
+    <div class="kzr-modal-backdrop" id="kzr-modal-backdrop" data-modal-close></div>
+    <div class="kzr-modal-dialog" role="document">
+      <button type="button" class="kzr-modal-close" id="kzr-modal-close-btn" data-modal-close aria-label="Fermer la fenêtre de détail">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="kzr-modal-content" id="kzr-modal-dynamic-content">
+        <!-- Content dynamically rendered via modal.js -->
+      </div>
+    </div>
+  </div>
+
   <!-- JavaScript Modules -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/particles.js"></script>
   <script src="assets/js/simulator.js"></script>
   <script src="assets/js/interactive.js"></script>
+  <script src="assets/js/modal.js"></script>
   <script src="assets/js/contact.js"></script>
 </body>
 </html>
