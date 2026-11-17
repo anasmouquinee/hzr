@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KZR Consulting | Agence Multiservices Premium à Casablanca & Maroc</title>
+  <meta name="description" content="KZR Consulting accompagne entreprises, copropriétés et particuliers au Maroc avec des services intégrés de syndic, sécurité, nettoyage, rénovation, aménagement et espaces verts. Devis en 24h.">
+  <link rel="icon" type="image/png" href="assets/images/logo_header.png">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Modular Vanilla CSS Stylesheets (No Tailwind CDN) -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+  <!-- ==================== TOP CONTACT & SLA BAR ==================== -->
+  <aside class="kzr-topbar" aria-label="Informations de contact rapide">
+    <div class="container kzr-topbar-inner">
+      <div class="kzr-topbar-info">
+        <a href="tel:+212661250118" class="kzr-topbar-link">
+          <i class="fa-solid fa-phone"></i>
+          <span>+212 661-250118</span>
+        </a>
+        <a href="mailto:contact@kzrconsulting.ma" class="kzr-topbar-link">
+          <i class="fa-solid fa-envelope"></i>
+          <span>contact@kzrconsulting.ma</span>
+        </a>
+        <span class="kzr-topbar-link">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>5 Rue Annoussour, Casablanca</span>
+        </span>
+      </div>
+      <div class="kzr-topbar-sla">
+        <i class="fa-solid fa-bolt"></i>
+        <span>Réponse garantie sous 24h ouvrées</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN HEADER & NAVIGATION ==================== -->
+  <header class="kzr-header">
+    <div class="container kzr-header-inner">
+      <!-- Brand Logo -->
+      <a href="index.html" class="kzr-brand" aria-label="KZR Consulting — Accueil">
+        <img src="assets/images/logo_header.png" alt="Logo KZR Consulting" class="kzr-brand-logo">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="kzr-nav-desktop" aria-label="Navigation principale">
+        <ul class="kzr-nav-list">
+          <li class="kzr-nav-item">
+            <a href="index.html" class="kzr-nav-link active">Accueil</a>
+          </li>
+          <li class="kzr-nav-item">
+            <a href="a-propos.html" class="kzr-nav-link">À Propos</a>
+          </li>
+          
+          <!-- Dropdown Services Mega Menu -->
+          <li class="kzr-nav-item">
+            <a href="#les-poles" class="kzr-nav-link kzr-dropdown-toggle" id="services-menu-btn" aria-haspopup="true">
+              <span>Nos 6 Pôles</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <div class="kzr-dropdown-menu" role="menu" aria-labelledby="services-menu-btn">
+              <div class="kzr-dropdown-grid">
+                <a href="syndic.html" class="kzr-dropdown-card" role="menuitem">
+                  <div class="kzr-dropdown-icon"><i class="fa-solid fa-building-user"></i></div>
+                  <div class="kzr-dropdown-content">
+                    <h4>Syndic de Copropriété</h4>
+                    <p>Gestion rigoureuse, loi 18-00 & finances claires</p>
+                  </div>
+                </a>
+                <a href="securite.html" class="kzr-dropdown-card" role="menuitem">
+                  <div class="kzr-dropdown-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                  <div class="kzr-dropdown-content">
+                    <h4>Sécurité & Gardiennage</h4>
+                    <p>Protection 24/7, contrôle d'accès & rondes</p>
+                  </div>
+                </a>
+                <a href="nettoyage.html" class="kzr-dropdown-card" role="menuitem">
+                  <div class="kzr-dropdown-icon"><i class="fa-solid fa-broom"></i></div>
+                  <div class="kzr-dropdown-content">
+                    <h4>Nettoyage Professionnel</h4>
+                    <p>Bureaux, copropriétés, vitres & remise en état</p>
+                  </div>
+                </a>
+                <a href="renovation.html" class="kzr-dropdown-card" role="menuitem">
+                  <div class="kzr-dropdown-icon"><i class="fa-solid fa-trowel-bricks"></i></div>
+                  <div class="kzr-dropdown-content">
+                    <h4>Rénovation & Travaux</h4>
+                    <p>Second œuvre, peinture, étanchéité & plomberie</p>
+                  </div>
+                </a>
+                <a href="amenagement-decoration.html" class="kzr-dropdown-card" role="menuitem">
+                  <div class="kzr-dropdown-icon"><i class="fa-solid fa-couch"></i></div>
+                  <div class="kzr-dropdown-content">
+                    <h4>Aménagement & Déco</h4>
+                    <p>Conception 3D, agencement de bureaux & cuisines</p>
+                  </div>
+                </a>
+                <a href="espaces-verts.html" class="kzr-dropdown-card" role="menuitem">
+                  <div class="kzr-dropdown-icon"><i class="fa-solid fa-tree"></i></div>
+                  <div class="kzr-dropdown-content">
+                    <h4>Espaces Verts & Paysage</h4>
+                    <p>Création de jardins, arrosage auto & entretien</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="kzr-nav-item">
+            <a href="#simulateur" class="kzr-nav-link">Simulateur</a>
+          </li>
+          <li class="kzr-nav-item">
+            <a href="contact.html" class="kzr-nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Button & Mobile Toggle -->
+      <div class="kzr-header-actions">
+        <a href="#devis" class="kzr-nav-btn kzr-btn-quote">
+          <i class="fa-solid fa-file-invoice"></i>
+          <span>Devis Express</span>
+        </a>
+        <button type="button" class="kzr-menu-toggle" aria-label="Ouvrir le menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE DRAWER & BACKDROP ==================== -->
+  <div class="kzr-drawer-backdrop"></div>
+  <aside class="kzr-mobile-drawer" aria-label="Menu mobile">
+    <div class="kzr-drawer-header">
+      <img src="assets/images/logo_header.png" alt="KZR Consulting" style="height: 38px;">
+      <button type="button" class="kzr-drawer-close" aria-label="Fermer le menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="kzr-drawer-body">
+      <ul class="kzr-drawer-list">
+        <li><a href="index.html" class="kzr-drawer-link active">Accueil</a></li>
+        <li><a href="a-propos.html" class="kzr-drawer-link">À Propos</a></li>
+        <li>
+          <a href="#" class="kzr-drawer-link kzr-drawer-submenu-toggle">
+            <span>Nos 6 Pôles d'Expertise</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <ul class="kzr-drawer-sublist">
+            <li><a href="syndic.html" class="kzr-drawer-sublink"><i class="fa-solid fa-building-user"></i> Syndic de Copropriété</a></li>
+            <li><a href="securite.html" class="kzr-drawer-sublink"><i class="fa-solid fa-shield-halved"></i> Sécurité & Gardiennage</a></li>
+            <li><a href="nettoyage.html" class="kzr-drawer-sublink"><i class="fa-solid fa-broom"></i> Nettoyage Professionnel</a></li>
+            <li><a href="renovation.html" class="kzr-drawer-sublink"><i class="fa-solid fa-trowel-bricks"></i> Rénovation & Travaux</a></li>
+            <li><a href="amenagement-decoration.html" class="kzr-drawer-sublink"><i class="fa-solid fa-couch"></i> Aménagement & Déco</a></li>
+            <li><a href="espaces-verts.html" class="kzr-drawer-sublink"><i class="fa-solid fa-tree"></i> Espaces Verts</a></li>
+          </ul>
+        </li>
+        <li><a href="#simulateur" class="kzr-drawer-link">Simulateur de Devis</a></li>
+        <li><a href="contact.html" class="kzr-drawer-link">Contact</a></li>
+      </ul>
+    </div>
+    <div class="kzr-drawer-footer">
+      <a href="#devis" class="kzr-btn kzr-btn-gold kzr-drawer-cta">
+        <i class="fa-solid fa-file-invoice"></i>
+        <span>Demander un Devis</span>
+      </a>
+      <div class="kzr-drawer-contact-info">
+        <div><i class="fa-solid fa-phone" style="color: var(--accent-gold);"></i> +212 661-250118</div>
+        <div><i class="fa-solid fa-envelope" style="color: var(--accent-gold);"></i> contact@kzrconsulting.ma</div>
+        <div><i class="fa-solid fa-location-dot" style="color: var(--accent-gold);"></i> 5 Rue Annoussour, Casablanca</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="kzr-hero">
+    <div class="kzr-hero-pattern"></div>
+    <div class="container kzr-hero-grid">
+      <div class="kzr-hero-content">
+        <span class="eyebrow eyebrow-dark">
+          <i class="fa-solid fa-crown"></i>
+          Cabinet Multiservices Premium • Maroc
+        </span>
+        <h1 class="kzr-hero-title">
+          L'Exigence au Service de Vos Espaces de <span class="luxury-serif">Vie et de Travail</span>.
+        </h1>
+        <p class="kzr-hero-desc">
+          KZR Consulting accompagne entreprises, copropriétés haut de gamme et résidences privées au Maroc. 
+          Une synergie intégrée de <strong>6 pôles d'expertise</strong> avec un interlocuteur unique et un engagement qualité continu.
+        </p>
+
+        <div class="kzr-hero-actions">
+          <a href="#simulateur" class="kzr-btn kzr-btn-gold kzr-btn-lg">
+            <i class="fa-solid fa-calculator"></i>
+            <span>Simuler Mon Projet</span>
+          </a>
+          <a href="#les-poles" class="kzr-btn kzr-btn-outline-white kzr-btn-lg">
+            <span>Explorer les 6 Pôles</span>
+            <i class="fa-solid fa-arrow-down"></i>
+          </a>
+        </div>
+
+        <div class="kzr-hero-badges">
+          <div class="kzr-hero-badge-item">
+            <i class="fa-solid fa-user-tie"></i>
+            <span>Interlocuteur Unique</span>
+          </div>
+          <div class="kzr-hero-badge-item">
+            <i class="fa-solid fa-scale-balanced"></i>
+            <span>Conformité Loi 18-00</span>
+          </div>
+          <div class="kzr-hero-badge-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>Astreinte 24/7 & SLA 24h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="kzr-hero-visual">
+        <div class="kzr-hero-card-stack">
+          <div class="kzr-hero-floating-pill">
+            <span class="kzr-pulse-dot"></span>
+            <span>Casablanca & National</span>
+          </div>
+          <img src="assets/images/syndic-copropriete-casablanca.jpg" alt="Gestion immobilière et multiservices KZR Consulting" class="kzr-hero-main-img">
+          <div class="kzr-hero-overlay-card">
+            <div class="kzr-hero-overlay-info">
+              <h4>Pack Multiservices Clé en Main</h4>
+              <p>Syndic • Sécurité • Propreté • Travaux • Paysage</p>
+            </div>
+            <a href="contact.html" class="kzr-btn kzr-btn-sm kzr-btn-gold">
+              <span>Étude</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ANIMATED STATS / METRICS ==================== -->
+  <section class="kzr-stats-section" aria-label="Chiffres clés">
+    <div class="container kzr-stats-grid">
+      <div class="kzr-stat-item">
+        <div class="kzr-stat-number" data-target="100" data-suffix="%">100%</div>
+        <div class="kzr-stat-label">Engagement Réactivité</div>
+      </div>
+      <div class="kzr-stat-item">
+        <div class="kzr-stat-number" data-target="6" data-suffix=" Pôles">6 Pôles</div>
+        <div class="kzr-stat-label">Expertises Intégrées</div>
+      </div>
+      <div class="kzr-stat-item">
+        <div class="kzr-stat-number" data-target="24" data-suffix="h">24h</div>
+        <div class="kzr-stat-label">Délai Max de Devis</div>
+      </div>
+      <div class="kzr-stat-item">
+        <div class="kzr-stat-number" data-target="1" data-suffix=" Partenaire">1 Partenaire</div>
+        <div class="kzr-stat-label">Interlocuteur Unique</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== THE 6 PÔLES D'EXPERTISE ==================== -->
+  <section class="section" id="les-poles">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Solutions Intégrées</span>
+        <h2 class="section-title">Nos 6 Pôles d'Expertise</h2>
+        <p class="section-subtitle">
+          Une réponse globale et coordonnée pour la valorisation, la protection et l'embellissement de vos espaces de vie et de travail au Maroc.
+        </p>
+      </div>
+
+      <div class="kzr-poles-grid">
+        <!-- Pôle 01: Syndic -->
+        <article class="kzr-pole-card">
+          <div class="kzr-pole-thumb">
+            <span class="kzr-pole-tag">Pôle 01</span>
+            <img src="assets/images/syndic-copropriete-casablanca.jpg" alt="Syndic de copropriété à Casablanca" class="kzr-pole-img">
+          </div>
+          <div class="kzr-pole-body">
+            <h3 class="kzr-pole-title">Syndic de Copropriété</h3>
+            <p class="kzr-pole-desc">
+              Gestion administrative, financière et technique en stricte conformité avec la Loi 18-00. Transparence totale des comptes et tenue des AG.
+            </p>
+            <div class="kzr-pole-features">
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Tenue comptable & appels de charges</div>
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Entretien & maintenance préventive</div>
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Recouvrement & assistance juridique</div>
+            </div>
+            <div class="kzr-pole-footer">
+              <a href="syndic.html" class="kzr-pole-link">
+                <span>Découvrir le Pôle Syndic</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pôle 02: Sécurité -->
+        <article class="kzr-pole-card">
+          <div class="kzr-pole-thumb">
+            <span class="kzr-pole-tag">Pôle 02</span>
+            <img src="assets/images/securite-gardiennage-casablanca.jpg" alt="Sécurité et gardiennage à Casablanca" class="kzr-pole-img">
+          </div>
+          <div class="kzr-pole-body">
+            <h3 class="kzr-pole-title">Sécurité & Gardiennage</h3>
+            <p class="kzr-pole-desc">
+              Protection physique 24/7 de vos résidences, sièges et sites industriels. Agents formés, rondes électroniques et filtrage rigoureux des accès.
+            </p>
+            <div class="kzr-pole-features">
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Agents assermentés & courtois</div>
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Contrôle des accès & conciergerie</div>
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Ronde de nuit & astreinte d'urgence</div>
+            </div>
+            <div class="kzr-pole-footer">
+              <a href="securite.html" class="kzr-pole-link">
+                <span>Découvrir le Pôle Sécurité</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pôle 03: Nettoyage -->
+        <article class="kzr-pole-card">
+          <div class="kzr-pole-thumb">
+            <span class="kzr-pole-tag">Pôle 03</span>
+            <img src="assets/images/nettoyage-professionnel-casablanca.jpg" alt="Nettoyage professionnel à Casablanca" class="kzr-pole-img">
+          </div>
+          <div class="kzr-pole-body">
+            <h3 class="kzr-pole-title">Nettoyage Professionnel</h3>
+            <p class="kzr-pole-desc">
+              Hygiène et propreté irréprochable des parties communes, bureaux et résidences. Produits certifiés écologiques et protocoles rigoureux.
+            </p>
+            <div class="kzr-pole-features">
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Entretien quotidien des bureaux</div>
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Vitrerie en hauteur & façades</div>
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Remise en état après travaux</div>
+            </div>
+            <div class="kzr-pole-footer">
+              <a href="nettoyage.html" class="kzr-pole-link">
+                <span>Découvrir le Pôle Nettoyage</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pôle 04: Rénovation -->
+        <article class="kzr-pole-card">
+          <div class="kzr-pole-thumb">
+            <span class="kzr-pole-tag">Pôle 04</span>
+            <img src="assets/images/renovation-travaux-casablanca.jpg" alt="Rénovation et travaux à Casablanca" class="kzr-pole-img">
+          </div>
+          <div class="kzr-pole-body">
+            <h3 class="kzr-pole-title">Rénovation & Travaux</h3>
+            <p class="kzr-pole-desc">
+              Second œuvre, réhabilitation et dépannages d'urgence. Peinture intérieure/extérieure, étanchéité de toitures, électricité et plomberie.
+            </p>
+            <div class="kzr-pole-features">
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Travaux d'étanchéité garantis</div>
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Peinture décorative & ravalement</div>
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Dépannages plomberie & électricité</div>
+            </div>
+            <div class="kzr-pole-footer">
+              <a href="renovation.html" class="kzr-pole-link">
+                <span>Découvrir le Pôle Travaux</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pôle 05: Aménagement & Déco -->
+        <article class="kzr-pole-card">
+          <div class="kzr-pole-thumb">
+            <span class="kzr-pole-tag">Pôle 05</span>
+            <img src="assets/images/amenagement-interieur-casablanca.jpg" alt="Aménagement d'intérieur à Casablanca" class="kzr-pole-img">
+          </div>
+          <div class="kzr-pole-body">
+            <h3 class="kzr-pole-title">Aménagement & Déco</h3>
+            <p class="kzr-pole-desc">
+              De la conception 3D jusqu'à la livraison complète : bureaux modernes, cuisines équipées sur-mesure et relooking d'intérieurs résidentiels.
+            </p>
+            <div class="kzr-pole-features">
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Modélisation 3D avant travaux</div>
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Agencement de bureaux & open-spaces</div>
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Cuisines & menuiserie personnalisées</div>
+            </div>
+            <div class="kzr-pole-footer">
+              <a href="amenagement-decoration.html" class="kzr-pole-link">
+                <span>Découvrir le Pôle Déco</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pôle 06: Espaces Verts -->
+        <article class="kzr-pole-card">
+          <div class="kzr-pole-thumb">
+            <span class="kzr-pole-tag">Pôle 06</span>
+            <img src="assets/images/espaces-verts-jardin-casablanca.jpg" alt="Espaces verts et jardins à Casablanca" class="kzr-pole-img">
+          </div>
+          <div class="kzr-pole-body">
+            <h3 class="kzr-pole-title">Espaces Verts & Paysage</h3>
+            <p class="kzr-pole-desc">
+              Nos jardiniers paysagistes subliment vos extérieurs : création de jardins, pose de gazon, taille des arbres et arrosage automatique intelligent.
+            </p>
+            <div class="kzr-pole-features">
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Conception paysagère & plantations</div>
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Systèmes d'arrosage automatique</div>
+              <div class="kzr-pole-feature-item"><i class="fa-solid fa-check"></i> Tonte, taille d'arbres & élagage</div>
+            </div>
+            <div class="kzr-pole-footer">
+              <a href="espaces-verts.html" class="kzr-pole-link">
+                <span>Découvrir le Pôle Paysage</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE MULTISERVICES ESTIMATOR ==================== -->
+  <section class="section section-dark" id="simulateur">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-dark">Outil Interactif</span>
+        <h2 class="section-title">Simulateur de Devis en Ligne</h2>
+        <p class="section-subtitle">
+          Estimez votre formule idéale en quelques secondes. Sélectionnez vos pôles et configurez les spécificités de votre bâtiment.
+        </p>
+      </div>
+
+      <div class="kzr-simulator-card" id="kzr-simulator">
+        <div class="kzr-simulator-header">
+          <h3>Personnalisez Vos Besoins Multiservices</h3>
+          <p>Combinez nos compétences pour bénéficier d’un tarif préférentiel groupé et d’un gestionnaire unique.</p>
+        </div>
+
+        <div class="kzr-simulator-body">
+          <!-- Left Controls -->
+          <div class="kzr-sim-controls">
+            <!-- 1. Selection of Poles -->
+            <div class="kzr-sim-group">
+              <label class="kzr-sim-label">1. Choisissez vos pôles d'intervention :</label>
+              <div class="kzr-sim-pills">
+                <label>
+                  <input type="checkbox" class="kzr-sim-checkbox" value="Syndic de Copropriété" checked>
+                  <div class="kzr-sim-choice">
+                    <i class="fa-solid fa-building-user"></i>
+                    <span>Syndic</span>
+                  </div>
+                </label>
+                <label>
+                  <input type="checkbox" class="kzr-sim-checkbox" value="Sécurité & Gardiennage" checked>
+                  <div class="kzr-sim-choice">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Sécurité</span>
+                  </div>
+                </label>
+                <label>
+                  <input type="checkbox" class="kzr-sim-checkbox" value="Nettoyage Professionnel" checked>
+                  <div class="kzr-sim-choice">
+                    <i class="fa-solid fa-broom"></i>
+                    <span>Nettoyage</span>
+                  </div>
+                </label>
+                <label>
+                  <input type="checkbox" class="kzr-sim-checkbox" value="Rénovation & Travaux">
+                  <div class="kzr-sim-choice">
+                    <i class="fa-solid fa-trowel-bricks"></i>
+                    <span>Rénovation</span>
+                  </div>
+                </label>
+                <label>
+                  <input type="checkbox" class="kzr-sim-checkbox" value="Aménagement & Déco">
+                  <div class="kzr-sim-choice">
+                    <i class="fa-solid fa-couch"></i>
+                    <span>Aménagement</span>
+                  </div>
+                </label>
+                <label>
+                  <input type="checkbox" class="kzr-sim-checkbox" value="Espaces Verts">
+                  <div class="kzr-sim-choice">
+                    <i class="fa-solid fa-tree"></i>
+                    <span>Espaces Verts</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- 2. Type of Property -->
+            <div class="kzr-sim-group">
+              <label class="kzr-sim-label" for="sim-property-type">2. Nature de l'immeuble ou de l'espace :</label>
+              <select id="sim-property-type" class="kzr-form-select">
+                <option value="Immeuble résidentiel / Copropriété">Immeuble résidentiel / Copropriété</option>
+                <option value="Résidence fermée / Lotissement">Résidence fermée / Lotissement sécurisé</option>
+                <option value="Bureaux d'entreprise / Siège social">Bureaux d'entreprise / Siège social</option>
+                <option value="Local commercial / Showroom">Local commercial / Showroom / Clinique</option>
+                <option value="Villa de prestige / Domaine privé">Villa de prestige / Domaine privé</option>
+              </select>
+            </div>
+
+            <!-- 3. Size / Scope Range -->
+            <div class="kzr-sim-group">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label class="kzr-sim-label" for="sim-size-slider">3. Dimensionnement du projet :</label>
+                <span class="kzr-range-val-badge" id="sim-size-val">30 lots / appartements</span>
+              </div>
+              <div class="kzr-range-wrapper">
+                <input type="range" id="sim-size-slider" class="kzr-range-slider" min="5" max="100" value="30" step="5">
+                <div class="kzr-range-labels">
+                  <span>Petit format</span>
+                  <span>Moyen format</span>
+                  <span>Grand complexe</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Result Recommendation -->
+          <div class="kzr-sim-result-box">
+            <div>
+              <div class="kzr-sim-result-title">
+                <span>Synthèse de Votre Formule</span>
+                <span class="kzr-sim-result-badge" id="sim-out-count">3 Pôles Sélectionnés</span>
+              </div>
+
+              <div class="kzr-sim-summary-list">
+                <div class="kzr-sim-summary-item">
+                  <span class="label">Organisation :</span>
+                  <span class="val" id="sim-out-team">1 Responsable de Site + Agents</span>
+                </div>
+                <div class="kzr-sim-summary-item">
+                  <span class="label">Rythme de passage :</span>
+                  <span class="val" id="sim-out-freq">Présence continue ou quotidienne</span>
+                </div>
+                <div class="kzr-sim-summary-item">
+                  <span class="label">SLA Assistance :</span>
+                  <span class="val">Garantie sous 24h ouvrées</span>
+                </div>
+              </div>
+
+              <div class="kzr-sim-tier-box">
+                <div class="kzr-sim-tier-name" id="sim-out-tier-name">Pack Synergie Multiservices</div>
+                <div class="kzr-sim-tier-estimate" id="sim-out-tier-est">Tarif Préférentiel Groupé</div>
+                <p style="font-size: 0.775rem; color: var(--text-muted); margin-top: 0.25rem;">Étude technique et visite sur site offertes à Casablanca.</p>
+              </div>
+            </div>
+
+            <div class="kzr-sim-actions">
+              <a href="#" id="sim-whatsapp-btn" target="_blank" class="kzr-btn" style="background: #25D366; color: #fff;">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Transmettre la Simulation sur WhatsApp</span>
+              </a>
+              <a href="#devis" id="sim-quote-btn" class="kzr-btn kzr-btn-primary">
+                <i class="fa-solid fa-file-signature"></i>
+                <span>Finaliser ma Demande de Devis</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BEFORE / AFTER TRANSFORMATION SHOWCASE ==================== -->
+  <section class="section" id="avant-apres">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Preuve par les Résultats</span>
+        <h2 class="section-title">L'Impact KZR Consulting : Avant & Après</h2>
+        <p class="section-subtitle">
+          Faites glisser le curseur pour visualiser la métamorphose de nos chantiers de rénovation, remise en état et aménagement à Casablanca.
+        </p>
+      </div>
+
+      <div class="kzr-ba-container" aria-label="Comparatif interactif avant après">
+        <!-- Before Image (Base background) -->
+        <img src="assets/images/renovation-travaux-casablanca.jpg" alt="Espace avant intervention KZR" class="kzr-ba-img">
+        <span class="kzr-ba-badge kzr-ba-badge-before">Avant Travaux</span>
+
+        <!-- After Image (Revealed by dragging slider) -->
+        <div class="kzr-ba-after">
+          <img src="assets/images/amenagement-interieur.jpg" alt="Espace après rénovation haut de gamme KZR">
+          <span class="kzr-ba-badge kzr-ba-badge-after">Après Intervention KZR</span>
+        </div>
+
+        <div class="kzr-ba-divider"></div>
+
+        <!-- Slider Handle -->
+        <div class="kzr-ba-handle" title="Glisser pour comparer">
+          <i class="fa-solid fa-arrows-left-right"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHY CHOOSE US / VALUE PILLARS ==================== -->
+  <section class="section" style="background-color: var(--color-white); border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Nos Engagements</span>
+        <h2 class="section-title">Pourquoi Choisir KZR Consulting ?</h2>
+        <p class="section-subtitle">
+          Un standard d'exigence sans compromis pour vous libérer de toutes les complexités de gestion quotidienne.
+        </p>
+      </div>
+
+      <div class="kzr-pillars-grid">
+        <div class="kzr-pillar-card">
+          <div class="kzr-pillar-icon"><i class="fa-solid fa-user-shield"></i></div>
+          <h3 class="kzr-pillar-title">Interlocuteur Unique</h3>
+          <p class="kzr-pillar-desc">
+            Finie la multiplication des prestataires non coordonnés. Un gestionnaire dédié pilote l'ensemble de vos contrats et interventions.
+          </p>
+        </div>
+
+        <div class="kzr-pillar-card">
+          <div class="kzr-pillar-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+          <h3 class="kzr-pillar-title">Réactivité Sous 24h</h3>
+          <p class="kzr-pillar-desc">
+            En cas d'incident, de panne ou d'urgence technique, notre équipe d'astreinte intervient immédiatement pour sécuriser vos locaux.
+          </p>
+        </div>
+
+        <div class="kzr-pillar-card">
+          <div class="kzr-pillar-icon"><i class="fa-solid fa-medal"></i></div>
+          <h3 class="kzr-pillar-title">Équipes Qualifiées</h3>
+          <p class="kzr-pillar-desc">
+            Nos agents de sécurité, techniciens et spécialistes du nettoyage sont minutieusement formés, suivis et équipés de matériel de pointe.
+          </p>
+        </div>
+
+        <div class="kzr-pillar-card">
+          <div class="kzr-pillar-icon"><i class="fa-solid fa-file-circle-check"></i></div>
+          <h3 class="kzr-pillar-title">Transparence Totale</h3>
+          <p class="kzr-pillar-desc">
+            Comptes certifiés, rapports d'audits mensuels et respect absolu des engagements contractuels et des exigences réglementaires au Maroc.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS & CLIENT TRUST ==================== -->
+  <section class="section" style="background-color: var(--color-slate-100); border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Témoignages & Confiance</span>
+        <h2 class="section-title">Ce Que Disent Nos Partenaires</h2>
+        <p class="section-subtitle">
+          Conseils syndicaux, directeurs d'exploitation et résidents à Casablanca témoignent de notre rigueur.
+        </p>
+      </div>
+
+      <div class="kzr-testimonials-grid">
+        <div class="kzr-testimonial-card">
+          <div>
+            <div class="kzr-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="kzr-quote-text">
+              "La reprise du syndic de notre résidence à Anfa par KZR a complètement assaini nos comptes. Les assemblées générales sont claires, la sécurité est enfin irréprochable et les espaces verts resplendissent."
+            </p>
+          </div>
+          <div class="kzr-client-info">
+            <div class="kzr-client-avatar">MB</div>
+            <div class="kzr-client-meta">
+              <h5>M. Berrada</h5>
+              <p>Président du Conseil Syndical • Casablanca Anfa</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-testimonial-card">
+          <div>
+            <div class="kzr-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="kzr-quote-text">
+              "KZR Consulting gère le nettoyage quotidien de nos 1 200 m² de bureaux et la sécurité de notre siège. Le suivi est rigoureux et le gestionnaire dédié répond à chaque sollicitation en moins d’une heure."
+            </p>
+          </div>
+          <div class="kzr-client-info">
+            <div class="kzr-client-avatar">SL</div>
+            <div class="kzr-client-meta">
+              <h5>Samia L.</h5>
+              <p>Responsable des Services Généraux • Sidi Maârouf</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-testimonial-card">
+          <div>
+            <div class="kzr-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="kzr-quote-text">
+              "Nous avons confié à KZR la rénovation des parties communes et l’étanchéité des terrasses de notre complexe à Bouskoura. Délais respectés au jour près et budget maîtrisé sans surprise."
+            </p>
+          </div>
+          <div class="kzr-client-info">
+            <div class="kzr-client-avatar">KA</div>
+            <div class="kzr-client-meta">
+              <h5>Karim Alami</h5>
+              <p>Administrateur de Biens • Bouskoura</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ACCORDION ==================== -->
+  <section class="section" style="background-color: var(--color-white); border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Questions Fréquentes</span>
+        <h2 class="section-title">Tout Ce Que Vous Devez Savoir</h2>
+        <p class="section-subtitle">
+          Des réponses transparentes pour préparer sereinement votre collaboration avec KZR Consulting.
+        </p>
+      </div>
+
+      <div class="kzr-faq-list">
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Intervenez-vous dans tout le Grand Casablanca et au Maroc ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Oui, KZR Consulting intervient dans l'ensemble des quartiers du Grand Casablanca (Gauthier, Maârif, Anfa, Ain Diab, Racine, Sidi Maârouf, Bouskoura, Dar Bouazza, Mohammedia...) ainsi que dans les principales agglomérations du Royaume pour les projets d'envergure.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Peut-on souscrire un contrat combinant plusieurs pôles ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Absolument. KZR Consulting propose la formule <strong>Pack Multiservices</strong> permettant de regrouper par exemple le Syndic, la Sécurité, le Nettoyage et les Espaces Verts sous une convention unique avec une tarification optimisée et un gestionnaire de site dédié.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Quel est le délai de traitement pour une demande de devis ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              Nos équipes techniques s'engagent à étudier votre besoin et à vous adresser une proposition tarifaire détaillée sous <strong>24 heures ouvrées</strong>, avec si nécessaire une visite préliminaire gratuite de vos installations.
+            </div>
+          </div>
+        </div>
+
+        <div class="kzr-faq-item">
+          <button type="button" class="kzr-faq-trigger" aria-expanded="false">
+            <span>Comment se déroule la transition depuis notre ancien syndic ou prestataire ?</span>
+            <span class="kzr-faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="kzr-faq-content">
+            <div class="kzr-faq-inner">
+              KZR Consulting prend en charge l'ensemble des démarches de passation : audit d'entrée, récupération des archives, réconciliation comptable, et continuité immédiate des services sans aucune rupture pour les résidents ou occupants.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DEVIS EXPRESS & CONTACT ==================== -->
+  <section class="section section-dark" id="devis">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-dark">Passez à l'Action</span>
+        <h2 class="section-title">Confiez Vos Espaces à un Partenaire de Confiance</h2>
+        <p class="section-subtitle">
+          Remplissez le formulaire ci-dessous ou contactez notre bureau casablancais directement.
+        </p>
+      </div>
+
+      <div class="kzr-form-card" style="max-width: 860px; margin: 0 auto; color: var(--color-navy-950);">
+        <form id="kzr-quote-form" novalidate>
+          <div class="kzr-form-grid">
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="form-name">Nom complet ou Entreprise *</label>
+              <input type="text" id="form-name" class="kzr-form-input" placeholder="Ex: M. Berrada / Société ABC" required>
+            </div>
+
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="form-phone">Téléphone portable *</label>
+              <input type="tel" id="form-phone" class="kzr-form-input" placeholder="Ex: +212 661 250118" required>
+            </div>
+
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="form-email">Adresse e-mail</label>
+              <input type="email" id="form-email" class="kzr-form-input" placeholder="contact@domaine.ma">
+            </div>
+
+            <div class="kzr-form-group">
+              <label class="kzr-form-label" for="form-city">Ville / Quartier</label>
+              <input type="text" id="form-city" class="kzr-form-input" placeholder="Ex: Casablanca (Anfa, Gauthier...)">
+            </div>
+
+            <div class="kzr-form-group col-span-2">
+              <label class="kzr-form-label" for="form-service">Pôle ou Service principal *</label>
+              <select id="form-service" class="kzr-form-select" required>
+                <option value="">Sélectionnez une expertise...</option>
+                <option value="pack-multiservices">Pack Multiservices Global (Plusieurs Pôles)</option>
+                <option value="Syndic de Copropriété">Syndic de Copropriété (Loi 18-00)</option>
+                <option value="Sécurité & Gardiennage">Sécurité & Gardiennage 24/7</option>
+                <option value="Nettoyage Professionnel">Nettoyage Professionnel & Hygiène</option>
+                <option value="Rénovation & Travaux">Rénovation & Travaux de bâtiment</option>
+                <option value="Aménagement & Déco">Aménagement d'Intérieur & Modélisation 3D</option>
+                <option value="Espaces Verts">Espaces Verts & Entretien Paysager</option>
+              </select>
+            </div>
+
+            <div class="kzr-form-group col-span-2">
+              <label class="kzr-form-label" for="form-message">Détails de votre demande</label>
+              <textarea id="form-message" class="kzr-form-textarea" placeholder="Précisez la taille du bâtiment, le nombre de lots, la surface ou vos contraintes spécifiques..."></textarea>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+            <button type="submit" class="kzr-btn kzr-btn-gold kzr-btn-lg">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Envoyer ma Demande de Devis</span>
+            </button>
+            <button type="button" id="form-direct-wa" class="kzr-btn" style="background: #25D366; color: #fff;">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Devis Direct via WhatsApp</span>
+            </button>
+          </div>
+
+          <div id="form-feedback" class="kzr-form-feedback"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LUXURY FOOTER ==================== -->
+  <footer class="kzr-footer">
+    <div class="container">
+      <div class="kzr-footer-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div class="kzr-footer-col">
+          <img src="assets/images/logo_footer.png" alt="KZR Consulting Footer Logo" class="kzr-footer-logo">
+          <p class="kzr-footer-desc">
+            KZR Consulting est l'agence multiservices de référence à Casablanca et au Maroc. Nous mutualisons l'expertise de 6 pôles majeurs pour garantir la pérennité, la sécurité et le prestige de votre patrimoine immobilier.
+          </p>
+          <div class="kzr-social-links">
+            <a href="https://www.instagram.com/kzr_consulting/" target="_blank" rel="noopener" class="kzr-social-btn" aria-label="Instagram KZR Consulting">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61590665673242" target="_blank" rel="noopener" class="kzr-social-btn" aria-label="Facebook KZR Consulting">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/212661250118?text=Bonjour%20KZR%20Consulting" target="_blank" rel="noopener" class="kzr-social-btn" aria-label="WhatsApp KZR Consulting">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Nos 6 Pôles -->
+        <div class="kzr-footer-col">
+          <h4>Nos 6 Pôles</h4>
+          <nav class="kzr-footer-nav" aria-label="Liens des pôles">
+            <a href="syndic.html"><i class="fa-solid fa-angle-right"></i> Syndic de Copropriété</a>
+            <a href="securite.html"><i class="fa-solid fa-angle-right"></i> Sécurité & Gardiennage</a>
+            <a href="nettoyage.html"><i class="fa-solid fa-angle-right"></i> Nettoyage Professionnel</a>
+            <a href="renovation.html"><i class="fa-solid fa-angle-right"></i> Rénovation & Travaux</a>
+            <a href="amenagement-decoration.html"><i class="fa-solid fa-angle-right"></i> Aménagement & Déco</a>
+            <a href="espaces-verts.html"><i class="fa-solid fa-angle-right"></i> Espaces Verts & Paysage</a>
+          </nav>
+        </div>
+
+        <!-- Col 3: Navigation rapide -->
+        <div class="kzr-footer-col">
+          <h4>Navigation</h4>
+          <nav class="kzr-footer-nav" aria-label="Navigation rapide">
+            <a href="index.html"><i class="fa-solid fa-angle-right"></i> Accueil</a>
+            <a href="a-propos.html"><i class="fa-solid fa-angle-right"></i> À Propos du Cabinet</a>
+            <a href="#simulateur"><i class="fa-solid fa-angle-right"></i> Simulateur de Devis</a>
+            <a href="#avant-apres"><i class="fa-solid fa-angle-right"></i> Réalisations Avant / Après</a>
+            <a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact & Rendez-vous</a>
+          </nav>
+        </div>
+
+        <!-- Col 4: Contact & Coordonnées -->
+        <div class="kzr-footer-col">
+          <h4>Bureau de Casablanca</h4>
+          <div class="kzr-footer-contact-list">
+            <div class="kzr-footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>5 Rue Annoussour, Casablanca, Maroc</span>
+            </div>
+            <div class="kzr-footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+212661250118" style="color: inherit;">+212 661-250118</a>
+            </div>
+            <div class="kzr-footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:contact@kzrconsulting.ma" style="color: inherit;">contact@kzrconsulting.ma</a>
+            </div>
+            <div class="kzr-footer-contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <span>Lun - Ven : 08h30 - 18h30<br>Astreinte d'urgence 24/7</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="kzr-footer-bottom">
+        <div>
+          &copy; 2026 KZR Consulting. Tous droits réservés. Cabinet Multiservices à Casablanca.
+        </div>
+        <div class="kzr-footer-bottom-links">
+          <a href="#">Mentions Légales</a>
+          <a href="#">Politique de Confidentialité</a>
+          <a href="contact.html">Demande de Devis</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING ACTIONS ==================== -->
+  <aside class="kzr-floating-actions" aria-label="Actions rapides flottantes">
+    <a href="https://wa.me/212661250118?text=Bonjour%20KZR%20Consulting,%20je%20souhaite%20un%20devis%20personnalis%C3%A9" 
+       target="_blank" rel="noopener" class="kzr-floating-whatsapp" aria-label="Contacter KZR Consulting sur WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp Direct</span>
+    </a>
+    <button type="button" class="kzr-back-to-top" aria-label="Remonter en haut de page">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </aside>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/simulator.js"></script>
+  <script src="assets/js/interactive.js"></script>
+  <script src="assets/js/contact.js"></script>
+</body>
+</html>

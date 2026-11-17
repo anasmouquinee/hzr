@@ -1,0 +1,97 @@
+/* ==========================================================================
+   KZR CONSULTING - DESIGN TOKENS & CSS VARIABLES
+   Luxury Moroccan Corporate Multiservices Theme
+   ========================================================================== */
+
+:root {
+  /* --- Primary Color Palette --- */
+  --color-navy-950: #030d1a;
+  --color-navy-900: #041427;
+  --color-navy-850: #071e38;
+  --color-navy-800: #0b2c4f;
+  --color-navy-700: #103c6b;
+  --color-navy-600: #18528f;
+  
+  /* --- Luxury Accent Colors --- */
+  --color-gold-900: #8c671b;
+  --color-gold-700: #b88628;
+  --color-gold:     #c89b3c;
+  --color-gold-400: #deb45a;
+  --color-gold-200: #f5e4bd;
+  --color-gold-50:  #fdfaf3;
+
+  /* --- Secondary & Functional Colors --- */
+  --color-teal-600: #0b7285;
+  --color-teal-500: #0c8599;
+  --color-emerald-600: #059669;
+  --color-emerald-500: #10b981;
+  --color-amber-500: #f59e0b;
+  
+  /* --- Neutral & Surface Shades --- */
+  --color-white: #ffffff;
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+
+  /* --- Semantic Aliases --- */
+  --bg-primary: var(--color-slate-50);
+  --bg-surface: var(--color-white);
+  --bg-surface-elevated: #ffffff;
+  --bg-surface-dark: var(--color-navy-900);
+  --bg-surface-dark-card: var(--color-navy-850);
+  
+  --text-main: var(--color-slate-900);
+  --text-muted: var(--color-slate-600);
+  --text-light: var(--color-slate-400);
+  --text-inverted: var(--color-white);
+  --text-inverted-muted: rgba(255, 255, 255, 0.75);
+
+  --accent-gold: var(--color-gold);
+  --accent-gold-hover: var(--color-gold-400);
+  --accent-blue: var(--color-navy-800);
+
+  /* --- Borders & Outlines --- */
+  --border-light: rgba(15, 23, 42, 0.08);
+  --border-medium: rgba(15, 23, 42, 0.14);
+  --border-dark: rgba(255, 255, 255, 0.12);
+  --border-gold: rgba(200, 155, 60, 0.35);
+
+  /* --- Typography --- */
+  --font-heading: 'Outfit', 'Onest', system-ui, -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+
+  /* --- Shadows --- */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08), 0 2px 4px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 28px -4px rgba(4, 20, 39, 0.12), 0 4px 10px -2px rgba(4, 20, 39, 0.06);
+  --shadow-xl: 0 20px 40px -8px rgba(4, 20, 39, 0.18), 0 8px 16px -4px rgba(4, 20, 39, 0.08);
+  --shadow-gold: 0 10px 25px -5px rgba(200, 155, 60, 0.28);
+  --shadow-glow: 0 0 30px rgba(11, 44, 79, 0.2);
+
+  /* --- Layout & Spacing --- */
+  --container-max-width: 1280px;
+  --container-narrow: 1040px;
+  --header-height: 80px;
+  --topbar-height: 40px;
+
+  /* --- Border Radius --- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* --- Transitions --- */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
